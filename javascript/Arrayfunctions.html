@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Functions</title>
+</head>
+<body>
+    <h1>Arrays Functions</h1>
+
+    <pre>
+<script>
+var fruits = ['apple', 'orange', 'kiwi'];
+
+alert(fruits[1]);
+
+document.write("The Size of array 'fruits' is : " + fruits.length + "<br>");
+document.write(fruits);
+
+// Add elements to end of array
+fruits[3] = 'banana';
+fruits[fruits.length] = 'cherry';
+fruits.push('grape');
+
+// Add element to beginning
+fruits.unshift('blackberry');
+
+document.write("<br>-------------------------------------------------<br>");
+
+// Iterate through array
+document.write("The Array contents are:<br>");
+
+for (var i = 0; i < fruits.length; i++) {
+    document.write(fruits[i] + "<br>");
+}
+
+document.write("<br>-------------------------------------------------<br>");
+document.write("The Array contents after sorting:<br>");
+
+fruits.sort();
+
+// for...in loop
+var text = "";
+for (var i in fruits) {
+    text += fruits[i] + "<br>";
+    document.writeln(fruits[i] + "<br>");
+}
+
+document.writeln("<br>" + text);
+
+// Removing elements
+document.write("<br>-------------------------------------------------<br>");
+document.write("The Array contents after removing some elements:<br>");
+
+fruits.pop();
+fruits.shift();
+
+for (var i = 0; i < fruits.length; i++) {
+    document.write(fruits[i] + "<br>");
+}
+
+document.write("<br>-------------------------------------------------<br>");
+
+var arr = [true, 2, 3, "4", "Hello", "hello"];
+
+document.write("The Array contents before reversing elements:<br>");
+document.write(arr + "<br>");
+
+document.write("The Array contents after reversing elements:<br>");
+var new_array = arr.reverse();
+document.write(new_array + "<br>");
+
+document.write("<br>-------------------------------------------------<br>");
+document.write("The Array contents after concatenating:<br>");
+
+new_array = arr.concat(5, 6, 7);
+document.write(new_array + "<br>");
+
+console.log(new_array);
+
+// Slice example
+document.write("<br>-------------------------------------------------<br>");
+
+var arr1 = [23, 56, 87, 32, 75, 13];
+
+var new_arr1 = arr1.slice(2, 5);
+
+document.write(arr1 + "<br>");
+document.write("The Array contents after slicing:<br>");
+document.write(new_arr1 + "<br>");
+
+console.log(new_arr1);
+console.log("End");
+</script>
+    </pre>
+
+</body>
+</html>

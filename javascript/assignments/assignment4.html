@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4 - Clock</title>
+</head>
+<body>
+    <h2>Assignment 4 - Live Clock (Check Console)</h2>
+    
+    <script>
+        function startClock() {
+            setInterval(() => {
+                const now = new Date();
+                const timeString = now.getHours().toString().padStart(2, '0') + ":" +
+                                  now.getMinutes().toString().padStart(2, '0') + ":" +
+                                  now.getSeconds().toString().padStart(2, '0');
+                console.log(timeString);
+            }, 1000);
+        }
+        
+        startClock();
+    </script>
+</body>
+</html>

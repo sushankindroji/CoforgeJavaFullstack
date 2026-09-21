@@ -1,0 +1,9 @@
+$kind: http-request
+url: https://automationexercise.com/api/createAccount
+method: POST
+body:
+  type: json
+  content: |-
+    email=test@example.com
+    password=Test@123
+order: 3816244503458693

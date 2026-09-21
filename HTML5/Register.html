@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with HTML5 Validation</title>
+    <link rel="stylesheet" href="styles/Resgister.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Registration Portal</div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <h1 class="page-title">Create Your Account</h1>
+
+            <div class="form-container">
+                <form id="registrationForm" novalidate>
+
+                    <!-- Name Row -->
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="firstName" class="required">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required 
+                                       minlength="2" maxlength="30" pattern="[A-Za-z\s]+" 
+                                       placeholder="Enter your first name"
+                                       title="Only letters and spaces allowed">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="lastName" class="required">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required 
+                                       minlength="2" maxlength="30" pattern="[A-Za-z\s]+" 
+                                       placeholder="Enter your last name"
+                                       title="Only letters and spaces allowed">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password" class="required">Password</label>
+                        <input type="password" id="password" name="password" required 
+                               minlength="8" 
+                               pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}"
+                               placeholder="Create a strong password"
+                               title="Min 8 chars with uppercase, lowercase & number">
+                    </div>
+
+                    <!-- Phone & Date of Birth -->
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="phone" class="required">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required 
+                                       pattern="[0-9]{10}" maxlength="10"
+                                       placeholder="Enter 10-digit phone number"
+                                       title="Phone number must contain exactly 10 digits">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" id="dob" name="dob" 
+                                       min="1900-01-01" max="2023-12-31">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Favorite Color -->
+                    <div class="form-group">
+                        <label for="profileColor">Favorite Color</label>
+                        <input type="color" id="profileColor" name="profileColor" value="#3498db">
+                    </div>
+
+                    <!-- Website -->
+                    <div class="form-group">
+                        <label for="website">Website (if any)</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com">
+                    </div>
+
+                    <!-- Bio -->
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" rows="4" maxlength="500"
+                            placeholder="Tell us about yourself (max 500 characters)..."></textarea>
+                    </div>
+
+                    <!-- Profile Picture -->
+                    <div class="form-group">
+                        <label for="avatar" class="required">Profile Picture</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*" required>
+                    </div>
+
+                    <!-- Resume -->
+                    <div class="form-group">
+                        <label for="resume">Resume (Optional)</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="terms" name="terms" required>
+                            I agree to the <a href="#">Terms & Conditions</a>
+                        </label>
+                    </div>
+
+                    <!-- Submit & Reset Buttons -->
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button type="submit" class="btn" style="width: 200px; margin: 10px;">Create Account</button>
+                        <button type="reset" class="btn" style="width: 200px; margin: 10px; background: #95a5a6;">Reset Form</button>
+                    </div>
+
+                </form>
+
+                <!-- Validation Info -->
+                <div class="validation-info">
+                    <h3>Form Validation Information</h3>
+                    <ul>
+                        <li><strong>Name fields:</strong> Required, 2-30 characters, letters and spaces only</li>
+                        <li><strong>Email:</strong> Required, must be a valid email format</li>
+                        <li><strong>Password:</strong> Required, min 8 chars with uppercase, lowercase & number</li>
+                        <li><strong>Phone:</strong> Required, exactly 10 digits</li>
+                        <li><strong>Date of Birth:</strong> Optional (1900–2023)</li>
+                        <li><strong>Favorite Color:</strong> Optional</li>
+                        <li><strong>Website:</strong> Optional, valid URL</li>
+                        <li><strong>Bio:</strong> Optional, max 500 characters</li>
+                        <li><strong>Profile Picture:</strong> Required, image only</li>
+                        <li><strong>Resume:</strong> Optional (.pdf, .doc, .docx)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>We provide the best registration services with user-friendly interfaces.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Email: info@example.com</li>
+                        <li>Phone: +1 (123) 456-7890</li>
+                        <li>Address: 123 Main St, City, Country</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Registration Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

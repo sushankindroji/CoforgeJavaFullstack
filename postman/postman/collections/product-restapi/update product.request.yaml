@@ -1,0 +1,14 @@
+$kind: http-request
+name: update product
+url: http://localhost:8088/producthive/api/products/1008
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+            "name": "Webcam HD 1080p",
+            "brand": "HP",
+            "madein": "India",
+            "price": 3599.0
+        }
+order: 4417040626565132

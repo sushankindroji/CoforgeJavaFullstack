@@ -1,0 +1,13 @@
+$kind: http-request
+url: https://jsonplaceholder.typicode.com/posts/11
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+      "id": 11,
+      "title": "Updated API Testing Post 11",
+      "body": "Updated using PUT method",
+      "userId": 1
+    }
+order: 4503193170779671

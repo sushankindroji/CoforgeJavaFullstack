@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3. Product Price Calculator</title>
+</head>
+<body>
+    <h2>Product Price Calculator</h2>
+    <input type="text" id="pname" placeholder="Product Name"><br><br>
+    <input type="number" id="qty" placeholder="Quantity" min="1"><br><br>
+    <input type="number" id="price" placeholder="Price per unit"><br><br>
+    <button onclick="calculate()">Calculate</button>
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            const qty = parseFloat(document.getElementById('qty').value) || 0;
+            const price = parseFloat(document.getElementById('price').value) || 0;
+            const subtotal = qty * price;
+            const gst = subtotal * 0.18;
+            let discount = 0;
+            if (subtotal > 5000) discount = subtotal * 0.10;
+            const final = subtotal + gst - discount;
+
+            document.getElementById('result').innerHTML = `
+                <p>Subtotal: ₹${subtotal.toFixed(2)}</p>
+                <p>GST (18%): ₹${gst.toFixed(2)}</p>
+                <p>Discount: ₹${discount.toFixed(2)}</p>
+                <p><b>Final Amount: ₹${final.toFixed(2)}</b></p>
+            `;
+        }
+    </script>
+</body>
+</html>

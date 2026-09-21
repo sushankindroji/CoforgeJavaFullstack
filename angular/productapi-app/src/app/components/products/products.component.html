@@ -1,0 +1,174 @@
+<div class="product-dashboard">
+  <!-- Animated Header -->
+  <div class="dashboard-header">
+    <div class="header-content">
+      <h1 class="dashboard-title">
+        <span class="title-icon">📦</span>
+        <span class="title-text">Product Inventory</span>
+      </h1>
+      <div class="dashboard-subtitle">Manage your product catalog with ease</div>
+    </div>
+
+    <div class="header-stats">
+      <div class="stat-card">
+        <div class="stat-icon">📊</div>
+        <div class="stat-info">
+          <div class="stat-value">{{ products.length }}</div>
+          <div class="stat-label">Total Products</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Control Panel -->
+  <div class="control-panel">
+    <button class="add-product-btn" (click)="addProduct()">
+      <span class="btn-icon">+</span>
+      <span class="btn-text">Add New Product</span>
+    </button>
+  </div>
+
+  <!-- Success Message -->
+  <div *ngIf="message" class="success-message">
+    <div class="success-content">
+      <div class="success-icon">✅</div>
+      <div class="success-text">{{ message }}</div>
+      <button class="success-close" (click)="message = ''">
+        <span class="close-icon">×</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Products Table -->
+  <div *ngIf="products.length > 0" class="products-container">
+    <div class="table-wrapper">
+      <table class="products-table">
+        <thead>
+          <tr>
+            <th>
+              <div class="column-header">
+                <span class="column-icon">#</span>
+                ID
+              </div>
+            </th>
+
+            <th>
+              <div class="column-header">
+                <span class="column-icon">🏷️</span>
+                Product Name
+              </div>
+            </th>
+
+            <th>
+              <div class="column-header">
+                <span class="column-icon">🏭</span>
+                Brand
+              </div>
+            </th>
+
+            <th>
+              <div class="column-header">
+                <span class="column-icon">🌍</span>
+                Made In
+              </div>
+            </th>
+
+            <th>
+              <div class="column-header">
+                <span class="column-icon">💰</span>
+                Price
+              </div>
+            </th>
+
+            <th>
+              <div class="column-header">
+                <span class="column-icon">⚡</span>
+                Actions
+              </div>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let product of products" class="product-row">
+
+            <td>
+              <div class="id-badge">{{ product.pid }}</div>
+            </td>
+
+            <td>
+              <div class="product-name">
+                <span class="name-text">{{ product.name }}</span>
+                <span *ngIf="product.featured" class="featured-badge">
+                  FEATURED
+                </span>
+              </div>
+            </td>
+
+            <td>
+              <div class="brand-info">
+                <span class="brand-name">{{ product.brand }}</span>
+              </div>
+            </td>
+
+            <td>
+              <div class="origin-info">
+                <span class="country-name">{{ product.madein }}</span>
+              </div>
+            </td>
+
+            <td>
+              <div class="price-display">
+                <span class="currency">₹</span>
+                <span class="price-value">
+                  {{ product.price | number:'1.2-2' }}
+                </span>
+              </div>
+            </td>
+
+            <td>
+              <div class="action-buttons">
+
+                <button
+                  (click)="productDetails(product.pid)"
+                  class="action-btn details-btn"
+                  title="View Details">
+                  <span class="action-icon">👁️</span>
+                  <span class="action-text">Details</span>
+                </button>
+
+                <button
+                  (click)="editProduct(product.pid)"
+                  class="action-btn update-btn"
+                  title="Edit Product">
+                  <span class="action-icon">✏️</span>
+                  <span class="action-text">Edit</span>
+                </button>
+
+                <button
+                  (click)="deleteProduct(product.pid)"
+                  class="action-btn delete-btn"
+                  title="Delete Product">
+                  <span class="action-icon">🗑️</span>
+                  <span class="action-text">Delete</span>
+                </button>
+
+              </div>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div *ngIf="products.length === 0" class="empty-state">
+    <div class="empty-illustration">
+      <div class="empty-icon">📦</div>
+    </div>
+
+    <h3>No products found</h3>
+    <p>There are currently no products in the inventory.</p>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+$kind: http-request
+name: register customer
+url: http://localhost:8088/api/customers
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: firstName
+      value: James
+      description: ""
+      disabled: false
+    - type: text
+      key: lastName
+      value: Gosling
+      description: ""
+      disabled: false
+    - type: file
+      key: passport
+      src:
+        - /Users/sushank2/Downloads/sample1.pdf
+      description: ""
+      disabled: false
+    - type: file
+      key: image
+      src:
+        - /Users/sushank2/Downloads/sample_640×426.jpg
+      description: ""
+      disabled: false
+order: 1785233438337

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            padding:20px;
+        }
+        .container{
+            width:500px;
+            margin:auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+        h2{
+            color:darkblue;
+        }
+        p{
+            color:black;
+        }
+        .demo{
+            color:green;
+            font-weight:bold;
+        }
+        button{
+            padding:10px 15px;
+            margin:5px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2 id="title">JavaScript DOM Methods Demo</h2>
+
+    <p class="demo">Paragraph 1</p>
+    <p class="demo">Paragraph 2</p>
+    <p>Paragraph 3</p>
+
+    <button onclick="byId()">getElementById()</button>
+    <button onclick="byClass()">getElementsByClassName()</button>
+    <button onclick="byTag()">getElementsByTagName()</button>
+    <button onclick="byQuery()">querySelector()</button>
+    <button onclick="byQueryAll()">querySelectorAll()</button>
+</div>
+<script>
+    function byId() {
+        document.getElementById("title").innerHTML = "Changed by getElementById()";
+
+    }
+    function byClass() {
+        var elements = document.getElementsByClassName("demo");
+       x[0]=style.color="red";
+       x[1]=style.color="blue";
+        }
+    function byTag() {
+        var p= document.getElementsByTagName("p");
+        p[0].style.fontSize="20px"; 
+
+    }
+    function byQuery() {
+        var p = document.querySelector("p");
+        p.style.fontWeight="bold";
+    }
+    
+</script>
+</body>
+</html>

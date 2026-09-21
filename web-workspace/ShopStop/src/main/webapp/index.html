@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ShopStop - Home Page</title>
+<style>
+/*==========================================
+        ShopStop Dashboard Theme
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/*==========================================
+            Main Container
+==========================================*/
+
+.container{
+
+    width:1100px;
+    max-width:95%;
+
+    margin:40px auto;
+
+    background:rgba(255,255,255,.96);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+    animation:fadeIn .8s ease;
+}
+
+/*==========================================
+                Logo
+==========================================*/
+
+.logo{
+
+    text-align:center;
+
+    font-size:52px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+    color:#0f172a;
+}
+
+.logo span{
+
+    color:#2563eb;
+}
+
+/*==========================================
+             Heading
+==========================================*/
+
+h2{
+
+    text-align:center;
+
+    color:#1e3a8a;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:18px;
+
+    margin-bottom:40px;
+}
+
+/*==========================================
+              Menu Grid
+==========================================*/
+
+.menu{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+/*==========================================
+             Menu Cards
+==========================================*/
+
+.menu a{
+
+    text-decoration:none;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    color:white;
+
+    padding:22px;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 8px 18px rgba(37,99,235,.30);
+}
+
+.menu a:hover{
+
+    transform:translateY(-8px) scale(1.04);
+
+    background:linear-gradient(135deg,#16a34a,#15803d);
+
+    box-shadow:0 15px 30px rgba(22,163,74,.45);
+}
+
+/*==========================================
+              Footer
+==========================================*/
+
+.footer{
+
+    margin-top:auto;
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:0 -5px 15px rgba(0,0,0,.25);
+}
+
+.footer hr{
+
+    border:none;
+
+    height:1px;
+
+    background:#374151;
+
+    margin-bottom:20px;
+}
+
+.footer p{
+
+    margin:6px 0;
+
+    font-size:16px;
+
+    color:#d1d5db;
+}
+
+/*==========================================
+            Animation
+==========================================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/*==========================================
+           Responsive Design
+==========================================*/
+
+@media(max-width:992px){
+
+.menu{
+
+    grid-template-columns:repeat(2,1fr);
+}
+
+.container{
+
+    width:95%;
+}
+}
+
+@media(max-width:650px){
+
+.menu{
+
+    grid-template-columns:1fr;
+}
+
+.logo{
+
+    font-size:40px;
+}
+
+h2{
+
+    font-size:28px;
+}
+
+.subtitle{
+
+    font-size:16px;
+}
+
+.menu a{
+
+    font-size:17px;
+}
+}
+</style>
+</head>
+<body>
+	<div class="container">
+
+		<div class="logo">
+			🛒 Shop<span>Stop</span>
+		</div>
+
+		<h2>Welcome to ShopStop</h2>
+
+		<p class="subtitle">Your One-Stop Destination for Smart Shopping</p>
+
+		<div class="menu">
+
+			<a href="HelloWorld"> 🌍 HelloWorld Servlet </a> 
+			<a href="SecondServlet"> 📄 HttpServletRequest Demo </a> 
+			<a href="register.html"> 👤 Customer Registration </a> 
+			<a href="login.html"> 🔐 ShopStop Login </a> 
+			
+			<a href="sessionMethods"> HTTPSessionMethods </a> 
+			<a href="sessionlogin.html"> SessionManagement </a> 
+			<a href="#"> 🛍️ Product Catalog </a> 
+			<a href="#"> ➕ Add Product </a> 
+			<a href="#"> 📋 View Products </a> 
+			<a href="#"> 🛒 Shopping Cart </a> 
+			<a href="#"> ❤️ Wishlist </a> 
+			<a href="#"> 📦 My Orders </a> 
+			<a href="#"> 🚚 Track Order </a> 
+			<a href="#"> 👥 Customer List </a> 
+			<a href="#"> ⚙️ Admin Dashboard </a> 
+			<a href="#"> 📊 Sales Report </a>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+
+		<hr style="margin: 30px 0;">
+
+		<p>© 2026 ShopStop Online Shopping System</p>
+
+		<p>Developed using HTML, CSS, Servlets & JSP</p>
+
+	</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,15 @@
+$kind: http-request
+name: Create UPI ID for the new account
+url: http://localhost:8080/api/account/upi
+method: GET
+body:
+  type: json
+  content: |-
+    {
+      "upiId": "arjunmalhotra@apexbank"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{supabase_service_role_api_key_0l3v}}"
+order: 4490092130310951

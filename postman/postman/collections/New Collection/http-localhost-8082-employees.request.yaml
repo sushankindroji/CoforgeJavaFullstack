@@ -1,0 +1,6 @@
+$kind: http-request
+name: http://localhost:8082/employees
+description: ""
+url: http://localhost:8082/employees
+method: GET
+order: 1785134904578

@@ -1,0 +1,60 @@
+<div class="container">
+  <h1>TypeScript Demo - Angular 19</h1>
+  <p>This is a demo of TypeScript features in an Angular component.</p>
+
+  <div class="card">
+    <h2>Basic Data Types</h2>
+    <p><strong>Student Name:</strong> {{ studentName }}</p>
+    <p><strong>Age:</strong> {{ age }}</p>
+    <p><strong>Price:</strong> {{ price }}</p>
+    <p><strong>Is Trainer:</strong> {{ isTrainer }}</p>
+  </div>
+
+  <div class="card">
+    <h2>Arrays</h2>
+
+    <h3>Marks:</h3>
+    @for (mark of marks; track mark) {
+      <span class="badge">{{ mark }}</span>
+    }
+
+    <h3>Subjects:</h3>
+    @for (sub of subjects; track sub) {
+      <span class="badge subject">{{ sub }}</span>
+    }
+  </div>
+
+  <div class="card">
+    <h2>Tuple & Enum</h2>
+    <p><strong>Employee:</strong> {{ employee[0] }} - {{ employee[1] }}</p>
+    <p><strong>User Role:</strong> {{ userRole }}</p>
+  </div>
+
+  <div class="card">
+    <h2>Advanced Types</h2>
+    <p><strong>Any:</strong> {{ randomValue }}</p>
+    <p><strong>Unknown:</strong> {{ inputValue }}</p>
+    <p><strong>Union:</strong> {{ orderId }}</p>
+    <p><strong>Status:</strong> {{ status }}</p>
+  </div>
+
+  <div class="card">
+    <h2>Object</h2>
+    <p><strong>ID:</strong> {{ product.id }}</p>
+    <p><strong>Name:</strong> {{ product.name }}</p>
+    <p><strong>Price:</strong> ₹{{ product.price }}</p>
+  </div>
+
+  <div class="card">
+    <h2>Constructor</h2>
+    <p><strong>Employee Id:</strong> {{ empId }}</p>
+    <p><strong>Employee Name:</strong> {{ name }}</p>
+    <p><strong>Company:</strong> {{ company }}</p>
+  </div>
+
+  <div class="card">
+    <h2>Function</h2>
+    <p>10 + 20 = <strong>{{ addNumbers(10,20) }}</strong></p>
+    <p>Area of circle with radius 5 = <strong>{{ area(5) }}</strong></p>
+  </div>
+</div>

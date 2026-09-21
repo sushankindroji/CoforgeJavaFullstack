@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attendance Management</title>
+    <style>
+        body{
+            font-family:Arial, sans-serif;
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:700px;
+            margin:auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:darkblue;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+
+        table,th,td{
+            border:1px solid black;
+        }
+
+        th{
+            background:darkblue;
+            color:white;
+            padding:10px;
+        }
+
+        td{
+            padding:8px;
+            text-align:center;
+        }
+
+        input,select{
+            padding:8px;
+            margin:5px;
+        }
+
+        button{
+            padding:8px 15px;
+            background:green;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:darkgreen;
+        }
+
+        #msg{
+            color:red;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+<h2>Employee Attendance Management</h2>
+
+Employee ID :
+<input type="text" id="empId">
+
+Employee Name :
+<input type="text" id="empName">
+
+Attendance :
+<select id="status">
+    <option value="">Select</option>
+    <option>Present</option>
+    <option>Absent</option>
+</select>
+
+<button id="btnSave">Save Attendance</button>
+
+<p id="msg"></p>
+
+<table id="attendanceTable">
+    <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Attendance</th>
+    </tr>
+</table>
+
+</div>
+
+<script>
+
+document.getElementById("status").addEventListener("change", function(){
+    document.getElementById("msg").innerHTML =
+        "Selected Attendance : " + this.value;
+});
+
+document.getElementById("btnSave").addEventListener("click", function(){
+
+    let id = document.getElementById("empId").value;
+    let name = document.getElementById("empName").value;
+    let status = document.getElementById("status").value;
+
+    if(id=="" || name=="" || status==""){
+        alert("Please fill all fields.");
+        return;
+    }
+
+    let table = document.getElementById("attendanceTable");
+
+    let row = table.insertRow();
+
+    row.insertCell(0).innerHTML = id;
+    row.insertCell(1).innerHTML = name;
+    row.insertCell(2).innerHTML = status;
+
+    document.getElementById("empId").value="";
+    document.getElementById("empName").value="";
+    document.getElementById("status").selectedIndex=0;
+    document.getElementById("msg").innerHTML="Attendance Saved Successfully!";
+});
+
+</script>
+    
+</body>
+</html>

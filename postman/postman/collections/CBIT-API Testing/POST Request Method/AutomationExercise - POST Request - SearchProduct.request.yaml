@@ -1,0 +1,12 @@
+$kind: http-request
+url: https://automationexercise.com/api/searchProduct
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: search_product
+      value: top
+      description: ""
+      disabled: false
+order: 1789192788283

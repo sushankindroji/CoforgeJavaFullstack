@@ -1,0 +1,11 @@
+$kind: http-request
+url: https://jsonplaceholder.typicode.com/albums
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "userId": 1,
+      "title": "Selenium Testing Album"
+    }
+order: 4471711691745399

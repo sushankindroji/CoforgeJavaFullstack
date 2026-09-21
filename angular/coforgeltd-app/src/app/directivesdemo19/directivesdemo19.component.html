@@ -1,0 +1,100 @@
+<div class="container-dir">
+
+  <h2>Angular 19 Directives Demo</h2>
+
+  <!-- ===================== -->
+  <!-- @if -->
+  <!-- ===================== -->
+  <h3>&#64;if → Conditional Display</h3>
+  <p class="definition">
+    &#64;if replaces *ngIf for conditional rendering.
+  </p>
+
+  <button (click)="toggleContent()">Toggle Student List</button>
+
+  @if (showContent) {
+    <div class="card">
+      Student list is visible using &#64;if
+ 
+
+  <!-- ===================== -->
+  <!-- @for -->
+  <!-- ===================== -->
+  <h3>&#64;for → Looping Data</h3>
+  <p class="definition">
+    &#64;for replaces *ngFor for iterating arrays.
+  </p>
+
+  <ul>
+    @for (student of students; track student.name) {
+      <li>
+        {{student.name}} - {{student.marks}}
+      </li>
+    }
+  </ul>
+     </div>
+  }
+
+
+
+  
+    @for (s of skills; track s; let i=$index) {
+     <p>{{ i + 1 }}. {{ s }}</p>
+    }
+  
+
+  <!-- ===================== -->
+  <!-- ngClass -->
+  <!-- ===================== -->
+  <h3>[ngClass] → Dynamic Classes</h3>
+
+  @for (student of students; track student.name) {
+    <div class="box"
+         [ngClass]="student.marks >= 50 ? 'pass' : 'fail'">
+      {{student.name}} - {{student.marks}}
+    </div>
+  }
+
+  <!-- ===================== -->
+  <!-- ngStyle -->
+  <!-- ===================== -->
+  <h3>[ngStyle] → Dynamic Styles</h3>
+
+  @for (student of students; track student.name) {
+    <div class="box"
+         [ngStyle]="{
+           'color': student.marks >= 50 ? 'green' : 'red',
+           'font-weight': student.marks > 80 ? 'bold' : 'normal'
+         }">
+      {{student.name}} - {{student.marks}}
+    </div>
+  }
+
+  <!-- ===================== -->
+  <!-- @switch -->
+  <!-- ===================== -->
+  <h3>&#64;switch → Multiple Conditions</h3>
+
+  <div class="buttons">
+    <button (click)="changeGrade('A')">A</button>
+    <button (click)="changeGrade('B')">B</button>
+    <button (click)="changeGrade('C')">C</button>
+    <button (click)="changeGrade('D')">D</button>
+  </div>
+
+  @switch (selectedGrade) {
+    @case ('A') {
+      <p class="grade a">Excellent 🎉</p>
+    }
+    @case ('B') {
+      <p class="grade b">Good 👍</p>
+    }
+    @case ('C') {
+      <p class="grade c">Average 🙂</p>
+    }
+    @default {
+      <p class="grade d">Needs Improvement ⚠️</p>
+    }
+  }
+
+</div>

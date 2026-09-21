@@ -1,0 +1,114 @@
+<div class="app-container">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+        <img src="https://img.icons8.com/fluency/96/company.png" alt="Logo">
+            <div>
+                <h1>Customer Management System</h1>
+                <p>Spring Boot 4.x | Angular 19</p>
+           </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/register" routerLinkActive="active">
+                        Register Customer
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/customers" routerLinkActive="active">
+                        View Customers
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Customer Relationship Management</h2>
+            <p>
+                Manage customer profiles, passport documents and photographs
+                using Spring Boot REST API & Angular 19.
+            </p>
+
+            <div class="hero-buttons">
+                <a routerLink="/register" class="btn-primary">
+                    Register Customer
+                </a>
+
+                <a routerLink="/customers" class="btn-secondary">
+                    Customer Directory
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+           <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+        </div>
+    </section>
+
+    <!-- Main -->
+
+    <main>
+        <h2 class="section-title">
+            Customer Services
+        </h2>
+
+        <div class="cards">
+            <div class="card">
+              <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png">
+                <h3>Customer Registration</h3>
+              <p>
+                   Register customers with passport and profile image.
+                </p>
+                <a routerLink="/register">
+                    Open Module
+                </a>
+            </div>
+
+            <div class="card">
+               <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png">
+                <h3>Customer Directory</h3>
+                <p>
+                    View all customers with profile image and passport download.
+                </p>
+
+                <a routerLink="/customers">
+                    View Customers
+                </a>
+            </div>
+        </div>
+
+        <section class="about">
+            <h2>Why Customer Management System?</h2>
+            <p>
+                This application demonstrates complete CRUD operations using
+                Spring Boot REST APIs, Multipart File Upload,
+                MySQL Database and Angular 19 Standalone Components.
+            </p>
+        </section>
+    </main>
+
+    <!-- Routed Components -->
+
+    <router-outlet></router-outlet>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>
+            © 2026 Customer Management System |
+            Developed using Spring Boot & Angular 19
+        </p>
+    </footer>
+
+</div>

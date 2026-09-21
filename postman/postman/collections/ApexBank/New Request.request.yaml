@@ -1,0 +1,5 @@
+$kind: http-request
+name: New Request
+url: http://localhost:8080/api/admin/transactions
+method: GET
+order: 4503592587320740

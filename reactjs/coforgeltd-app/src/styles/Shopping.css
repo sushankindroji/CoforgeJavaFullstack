@@ -1,0 +1,98 @@
+.shopping-page {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(239, 246, 255, 0.96));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 26px;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+}
+
+.shopping-heading h2 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.shopping-heading p {
+  margin: 0.75rem 0 1.75rem;
+  color: #475569;
+}
+
+.product-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.shopping-inner {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.product-area { }
+
+.product-controls {
+  display:flex;
+  gap:8px;
+  margin-bottom:12px;
+}
+
+.product-controls input { flex:1; padding:8px 10px; border-radius:8px; border:1px solid rgba(148,163,184,0.12) }
+
+.product-card .product-actions { margin-top:12px }
+
+.product-card button { padding:8px 10px; border-radius:8px; border:none; background:#4338ca; color:white; font-weight:700 }
+
+.cart-panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid rgba(148,163,184,0.08);
+  box-shadow: 0 8px 18px rgba(15,23,42,0.04);
+}
+
+.cart-list { list-style:none; padding:0; margin:0 }
+
+.cart-item { display:flex; justify-content:space-between; align-items:center; gap:8px; padding:8px 6px; border-bottom:1px solid rgba(230,230,230,0.8) }
+
+.cart-actions { display:flex; gap:6px; align-items:center }
+
+.cart-actions button { padding:6px 8px; border-radius:8px; border:none; background:#e5e7eb }
+
+.cart-actions .remove { background:#ef4444; color:white }
+
+.cart-summary { margin-top:12px; font-weight:700 }
+
+.empty { color:#6b7280; padding:12px }
+
+@media (max-width:900px) {
+  .shopping-inner { grid-template-columns: 1fr }
+  .cart-panel { order: 2 }
+}
+
+.product-card {
+  padding: 1.6rem;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+.product-card h3 {
+  margin: 0 0 0.8rem;
+  color: #4338ca;
+}
+
+.product-card p {
+  margin: 0;
+  color: #475569;
+  font-weight: 600;
+}

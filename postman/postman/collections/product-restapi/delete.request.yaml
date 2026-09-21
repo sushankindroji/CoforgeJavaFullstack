@@ -1,0 +1,5 @@
+$kind: http-request
+name: delete
+url: http://localhost:8088/producthive/api/products/1008
+method: DELETE
+order: 4449081324811485

@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://automationexercise.com/api/brandsList
+method: GET
+order: 2164788556658485

@@ -1,0 +1,71 @@
+$kind: http-request
+url: https://fakestoreapi.com/products
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "id": 0,
+        "title": "{{title}}",
+        "price": "{{price}}",
+        "description": "{{description}}",
+        "category": "{{category}}",
+        "image": "https://fakestoreapi.com"
+
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status Code is 201", function () {
+
+          pm.response.to.have.status(201);
+
+      });
+
+      pm.test("Status Code", () => {
+
+          pm.response.to.have.status(201);
+
+      });
+
+      pm.test("Response Time", () => {
+
+          pm.expect(pm.response.responseTime).to.be.below(2000);
+
+      });
+
+      pm.test("Successful POST request", function () {
+
+          pm.expect(pm.response.code).to.be.oneOf([201, 202]);
+
+      });
+
+      pm.test("Status Code Validation", function () {
+
+          pm.response.to.have.status(
+              parseInt(pm.iterationData.get("expectedStatus"))
+          );
+
+      });
+
+      let jsonData = pm.response.json();
+
+      pm.test("Token exists", function () {
+
+          if (pm.response.code == 200) {
+
+              pm.expect(jsonData.token).to.not.be.null;
+
+          }
+
+      });
+
+      pm.test("Status Code Validation 2", function () {
+
+          pm.response.to.have.status(
+              parseInt(pm.iterationData.get("status"))
+          );
+
+      });
+    language: text/javascript
+order: 1789209095382

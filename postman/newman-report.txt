@@ -1,0 +1,156 @@
+newman
+
+CBIT-API Testing
+
+❏ GET Request Method
+↳ AutomationExercise - GET Request - BrandsList
+  GET https://automationexercise.com/api/brandsList [200 OK, 1.95kB, 1297ms]
+
+↳ AutomationExercise - GET Request - ProductsList
+  GET https://automationexercise.com/api/productsList [200 OK, 6.38kB, 384ms]
+
+↳ JSONPlaceholder - GET Request - All Albums
+  GET https://jsonplaceholder.typicode.com/albums [200 OK, 3.22kB, 29ms]
+
+↳ JSONPlaceholder - GET Request - All Comments
+  GET https://jsonplaceholder.typicode.com/comments [200 OK, 158.89kB, 17ms]
+
+↳ JSONPlaceholder - GET Request - All Photos
+  GET https://jsonplaceholder.typicode.com/photos [200 OK, 1.07MB, 23ms]
+
+↳ JSONPlaceholder - GET Request - All Todos
+  GET https://jsonplaceholder.typicode.com/todos [200 OK, 5.17kB, 12ms]
+
+↳ JSONPlaceholder - GET Request - All Users
+  GET https://jsonplaceholder.typicode.com/users [200 OK, 3.02kB, 12ms]
+
+↳ JSONPlaceholder - GET Request - Comment 5
+  GET https://jsonplaceholder.typicode.com/comments/5 [200 OK, 1.41kB, 14ms]
+
+↳ JSONPlaceholder - GET Request - Photos of Album 4
+  GET https://jsonplaceholder.typicode.com/albums/4/photos [200 OK, 2.96kB, 17ms]
+
+↳ JSONPlaceholder - GET Request - Post 3
+  GET https://jsonplaceholder.typicode.com/posts/3 [200 OK, 1.44kB, 14ms]
+
+↳ JSONPlaceholder - GET Request - Todos of User 3
+  GET https://jsonplaceholder.typicode.com/users/3/todos [200 OK, 3.7kB, 14ms]
+
+❏ POST Request Method
+↳ AutomationExercise - POST Request - SearchProduct
+  POST https://automationexercise.com/api/searchProduct [200 OK, 3.15kB, 332ms]
+
+↳ AutomationExercise - POST Request - VerifyLogin
+  POST https://automationexercise.com/api/createAccount [400 Bad Request, 849B, 324ms]
+
+↳ FakestoreAPI - POST Method
+  POST https://fakestoreapi.com/products [201 Created, 819B, 168ms]
+
+↳ JSONPlaceholder - POST Request - Albums
+  POST https://jsonplaceholder.typicode.com/albums [201 Created, 1.3kB, 221ms]
+
+↳ JSONPlaceholder - POST Request - Comments
+  POST https://jsonplaceholder.typicode.com/comments [201 Created, 1.35kB, 219ms]
+
+↳ JSONPlaceholder - POST Request - Photos
+  POST https://jsonplaceholder.typicode.com/photos [201 Created, 1.39kB, 226ms]
+
+↳ JSONPlaceholder - POST Request - Posts
+  POST https://jsonplaceholder.typicode.com/posts [201 Created, 1.34kB, 219ms]
+
+↳ JSONPlaceholder - POST Request - Todos
+  POST https://jsonplaceholder.typicode.com/todos [201 Created, 1.32kB, 217ms]
+
+↳ JSONPlaceholder - POST Request - Users
+  POST https://jsonplaceholder.typicode.com/users [201 Created, 1.39kB, 295ms]
+
+❏ PUT Request Method
+↳ JSONPlaceholder - PUT Request - Post 3
+  PUT https://jsonplaceholder.typicode.com/posts/3 [200 OK, 1.27kB, 211ms]
+
+↳ JSONPlaceholder - PUT Request - Post 4
+  PUT https://jsonplaceholder.typicode.com/posts/4 [200 OK, 1.24kB, 225ms]
+
+↳ JSONPlaceholder - PUT Request - Post 5
+  PUT https://jsonplaceholder.typicode.com/posts/5 [200 OK, 1.24kB, 250ms]
+
+↳ JSONPlaceholder - PUT Request - Post 6
+  PUT https://jsonplaceholder.typicode.com/posts/6 [200 OK, 1.24kB, 218ms]
+
+↳ JSONPlaceholder - PUT Request - Post 7
+  PUT https://jsonplaceholder.typicode.com/posts/7 [200 OK, 1.24kB, 224ms]
+
+↳ JSONPlaceholder - PUT Request - Post 8
+  PUT https://jsonplaceholder.typicode.com/posts/8 [200 OK, 1.24kB, 222ms]
+
+↳ JSONPlaceholder - PUT Request - Post 9
+  PUT https://jsonplaceholder.typicode.com/posts/9 [200 OK, 1.25kB, 213ms]
+
+↳ JSONPlaceholder - PUT Request - Post 10
+  PUT https://jsonplaceholder.typicode.com/posts/10 [200 OK, 1.25kB, 213ms]
+
+↳ JSONPlaceholder - PUT Request - Post 11
+  PUT https://jsonplaceholder.typicode.com/posts/11 [200 OK, 1.25kB, 286ms]
+
+↳ JSONPlaceholder - PUT Request - Post 12
+  PUT https://jsonplaceholder.typicode.com/posts/12 [200 OK, 1.25kB, 216ms]
+
+↳ JSONPlaceholder - PUT Request - Post 13
+  PUT https://jsonplaceholder.typicode.com/posts/13 [200 OK, 1.25kB, 218ms]
+
+↳ JSONPlaceholder - PUT Request - Post 14
+  PUT https://jsonplaceholder.typicode.com/posts/14 [200 OK, 1.24kB, 224ms]
+
+↳ JSONPlaceholder - PUT Request - Post 15
+  PUT https://jsonplaceholder.typicode.com/posts/15 [200 OK, 1.24kB, 219ms]
+
+↳ JSONPlaceholder - PUT Request - Post 16
+  PUT https://jsonplaceholder.typicode.com/posts/16 [200 OK, 1.24kB, 301ms]
+
+❏ DELETE Request Method
+↳ JSONPlaceholder - DELETE Request - Post 4
+  DELETE https://jsonplaceholder.typicode.com/posts/4 [200 OK, 1.1kB, 216ms]
+
+↳ JSONPlaceholder - DELETE Request - Post 5
+  DELETE https://jsonplaceholder.typicode.com/posts/5 [200 OK, 1.11kB, 220ms]
+
+↳ JSONPlaceholder - DELETE Request - Post 6
+  DELETE https://jsonplaceholder.typicode.com/posts/6 [200 OK, 1.11kB, 252ms]
+
+↳ JSONPlaceholder - DELETE Request - Post 7
+  DELETE https://jsonplaceholder.typicode.com/posts/7 [200 OK, 1.11kB, 219ms]
+
+↳ JSONPlaceholder - DELETE Request - Post 8
+  DELETE https://jsonplaceholder.typicode.com/posts/8 [200 OK, 1.11kB, 217ms]
+
+↳ JSONPlaceholder - DELETE Request - Post 9
+  DELETE https://jsonplaceholder.typicode.com/posts/9 [200 OK, 1.11kB, 250ms]
+
+↳ JSONPlaceholder - DELETE Request - Post 10
+  DELETE https://jsonplaceholder.typicode.com/posts/10 [200 OK, 1.11kB, 218ms]
+
+↳ JSONPlaceholder - DELETE Request - Post 11
+  DELETE https://jsonplaceholder.typicode.com/posts/11 [200 OK, 1.11kB, 218ms]
+
+↳ JSONPlaceholder - DELETE Request - Post 12
+  DELETE https://jsonplaceholder.typicode.com/posts/12 [200 OK, 1.11kB, 218ms]
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                  43 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                   0 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                   0 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                   0 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 9.7s                                           │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 1.25MB (approx)                               │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 216ms [min: 12ms, max: 1297ms, s.d.: 193ms] │
+└────────────────────────────────────────────────────────────────────┘

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS- Anonymous Function</title>
+</head>
+<body>
+    <h1>JavaScript Anonymous Functions</h1>
+
+    <script>
+        var hello=function() {document.writeln('<br> I am a Anonymous Function')};
+
+        hello(); //invke anonymous function
+
+        var mul=function(a,b){document.writeln('<br> Anonymous Functions with Parameters');
+         document.writeln('<br> The multiplication of 2 no is :'+(a*b));
+
+    }
+    mul(10,2);
+
+    var sqr=function(a){
+        document.writeln('<br> Anonymous Function with Return parameters');
+        return a*a;
+    }
+    let result=sqr(10);
+    document.write('<br> the square of a number is :'+result);
+
+    /*Passing Anonymous function as Argument to another function */
+    var nums=[2,3,4];
+
+    var doublenums=nums.map(function(n) {return n*2});
+    document.write('<br> +doublenums');
+    </script>
+</body>
+</html>

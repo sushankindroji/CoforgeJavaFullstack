@@ -1,0 +1,158 @@
+/* ==========================================
+   ABOUT PAGE  –  Apple Vision OS Glass
+========================================== */
+
+.about-us-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  padding: 48px 32px 64px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ---------- Individual Columns ---------- */
+.about-us-column {
+  flex: 1 1 calc(50% - 28px);
+  min-width: 300px;
+  padding: 36px 32px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(28px) saturate(150%);
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    0 16px 40px rgba(17, 24, 39, 0.07);
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us-column::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.65), transparent 45%),
+    radial-gradient(circle at 80% 90%, rgba(170, 210, 255, 0.2), transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-us-column:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.95),
+    0 28px 55px rgba(17, 24, 39, 0.12);
+}
+
+.about-us-column h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 16px;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1f2937;
+}
+
+.about-us-column p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #64748b;
+}
+
+/* ---------- Full-width Merged Section ---------- */
+.about-us-merge {
+  flex-basis: 100%;
+  padding: 48px 40px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(30px) saturate(160%);
+  -webkit-backdrop-filter: blur(30px) saturate(160%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.75),
+    0 20px 45px rgba(17, 24, 39, 0.08);
+  margin-top: 12px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us-merge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.6), transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(0, 113, 227, 0.07), transparent 55%);
+  pointer-events: none;
+}
+
+.about-us-merge .merged-content {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.about-us-merge h2 {
+  margin: 0 0 18px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  color: #1f2937;
+}
+
+.about-us-merge p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+/* Override any leftover global h2 color */
+.about-us-container h2 {
+  color: #1f2937;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+@media (max-width: 900px) {
+  .about-us-container {
+    padding: 36px 20px 48px;
+    gap: 22px;
+  }
+
+  .about-us-column {
+    flex: 1 1 100%;
+    padding: 32px 24px;
+  }
+
+  .about-us-merge {
+    padding: 36px 24px;
+  }
+
+  .about-us-merge h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-column h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-us-merge h2 {
+    font-size: 1.45rem;
+  }
+}

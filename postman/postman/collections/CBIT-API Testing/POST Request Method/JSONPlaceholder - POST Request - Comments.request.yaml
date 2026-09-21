@@ -1,0 +1,13 @@
+$kind: http-request
+url: https://jsonplaceholder.typicode.com/comments
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "postId": 1,
+      "name": "Sushank",
+      "email": "sushank@test.com",
+      "body": "This is a test comment"
+    }
+order: 4447347578465730

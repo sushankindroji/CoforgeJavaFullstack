@@ -1,0 +1,31 @@
+$kind: http-request
+name: http://localhost:8092/clients/customers
+description: ""
+url: http://localhost:8092/clients/customers
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: firstName
+      value: Sushank
+      description: ""
+      disabled: false
+    - type: text
+      key: lastName
+      value: I
+      description: ""
+      disabled: false
+    - type: file
+      key: passport
+      src:
+        - /Users/sushank2/Downloads/sample2.pdf
+      description: ""
+      disabled: false
+    - type: file
+      key: image
+      src:
+        - /Users/sushank2/Downloads/sample_640×426.jpg
+      description: ""
+      disabled: false
+order: 4438004753163749

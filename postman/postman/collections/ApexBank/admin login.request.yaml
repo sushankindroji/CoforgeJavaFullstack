@@ -1,0 +1,13 @@
+$kind: http-request
+name: admin login
+description: ""
+url: http://localhost:8081/api/auth/login
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "userId": "admin123",
+      "password": "admin123"
+    }
+order: 4503510191625624

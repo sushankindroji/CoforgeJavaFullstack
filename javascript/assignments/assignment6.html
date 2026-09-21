@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 6 - Form Data in Table</title>
+    <style>
+        table { border-collapse: collapse; width: 50%; margin: 20px 0; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h2>Assignment 6 - Form to Table</h2>
+    
+    <form id="form1" onsubmit="displayInTable(event)">
+        First name: <input type="text" id="fname" value="David"><br><br>
+        Last name: <input type="text" id="lname" value="Beckham"><br><br>
+        <input type="submit" value="Show in Table">
+    </form>
+
+    <table id="dataTable">
+        <tr><th>Field</th><th>Value</th></tr>
+    </table>
+
+    <script>
+        function displayInTable(e) {
+            e.preventDefault();
+            
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const table = document.getElementById('dataTable');
+            
+            // Clear previous data rows (keep header)
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+            
+            // Add rows
+            let row = table.insertRow();
+            row.insertCell(0).textContent = "First Name";
+            row.insertCell(1).textContent = fname;
+            
+            row = table.insertRow();
+            row.insertCell(0).textContent = "Last Name";
+            row.insertCell(1).textContent = lname;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; margin: 40px; background: #f4f7fa; }
+h1, h2 { color: #1a5276; }
+.menu a { margin-right: 20px; padding: 10px 15px; background: #2874a6; color: white; text-decoration: none; border-radius: 5px; }
+table { border-collapse: collapse; width: 100%; background: white; }
+th, td { padding: 10px; text-align: left; }
+th { background: #2874a6; color: white; }
+form input, form select { margin: 5px 0; padding: 6px; width: 250px; }

@@ -1,0 +1,53 @@
+# Dependencies - Node
+node_modules/
+npm-debug.log
+yarn-error.log
+*.tsbuildinfo
+
+# Dependencies - Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+
+# Dependencies - Java/Maven
+.m2/
+*.class
+
+# Dependencies - Gradle
+.gradle/
+
+# IDE metadata
+.idea/
+.classpath
+.project
+.settings/
+*.iml
+.DS_Store
+Thumbs.db
+
+# VSCode personal config
+.vscode/settings.json
+.vscode/extensions.json
+
+# Build artifacts (but NOT reports/results)
+/dist/
+/out/
+*.war
+
+# Temporary/Cache
+.cache/
+tmp/
+temp/
+*.tmp
+
+# Local environment (but NOT used configuration)
+.env.local
+.env.*.local

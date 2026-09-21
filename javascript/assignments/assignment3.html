@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3 - Second Lowest & Greatest</title>
+</head>
+<body>
+    <h2>Assignment 3</h2>
+    <script>
+        function secondLowestAndGreatest(arr) {
+            // Remove duplicates and sort
+            let sorted = [...new Set(arr)].sort((a, b) => a - b);
+            
+            if (sorted.length < 2) {
+                console.log("Array needs at least 2 unique numbers");
+                return;
+            }
+            
+            let secondLowest = sorted[1];
+            let secondGreatest = sorted[sorted.length - 2];
+            
+            console.log(secondLowest + "," + secondGreatest);
+            document.write("<p>Second Lowest: " + secondLowest + "<br>Second Greatest: " + secondGreatest + "</p>");
+        }
+        
+        // Test with sample
+        secondLowestAndGreatest([1, 2, 3, 4, 5]);
+    </script>
+</body>
+</html>

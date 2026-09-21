@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopStop Customer Registration</title>
+    <link rel="stylesheet" href="styles/mystyles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>ShopStop Customer Registration</h2>
+        
+        <form action="CustomerRegistrationServlet" method="post">
+            
+            <label>Customer ID</label>
+            <input type="text" name="cid" required>
+            
+            <label>Customer Name</label>
+            <input type="text" name="name" required>
+            
+            <label>Email</label>
+            <input type="email" name="email" required>
+            
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" required>
+            
+            <label>City</label>
+            <input type="text" name="city" required>
+            
+            <label>Interested Categories</label>
+            <div class="checkbox-group">
+                <input type="checkbox" name="category" value="Electronics"> Electronics<br>
+                <input type="checkbox" name="category" value="Fashion"> Fashion<br>
+                <input type="checkbox" name="category" value="Groceries"> Groceries<br>
+                <input type="checkbox" name="category" value="Home Appliances"> Home Appliances<br>
+                <input type="checkbox" name="category" value="Sports"> Sports
+            </div>
+            
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear">
+        </form>
+    </div>
+</body>
+</html>

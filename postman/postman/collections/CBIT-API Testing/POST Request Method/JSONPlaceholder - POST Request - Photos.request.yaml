@@ -1,0 +1,13 @@
+$kind: http-request
+url: https://jsonplaceholder.typicode.com/photos
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "albumId": 1,
+      "title": "Test Photo",
+      "url": "https://example.com/photo.jpg",
+      "thumbnailUrl": "https://example.com/thumbnail.jpg"
+    }
+order: 4486730397087472

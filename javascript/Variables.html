@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Variables, Data Types & Operators</title>
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 20px;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+        }
+        h2 {
+            background: #0056b3;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        p {
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.5;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid gray;
+        }
+        th {
+            background: #0056b3;
+            color: white;
+            padding: 10px;
+        }
+        td {
+            padding: 10px;
+        }
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        .result {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <h1>JavaScript - Variables, Data Types & Operators</h1>
+        
+        <script>
+            //=========================================================
+            // VARIABLES
+            //=========================================================
+            document.write("<h2>1. Variables</h2>");
+            document.write("<p><b>Definition:</b> A variable is a named memory location used to store data. JavaScript provides three keywords to declare variables: <b>var</b>, <b>let</b>, and <b>const</b>.</p>");
+
+            // Sample variables
+            var studentName = "Rahul Sharma";
+            let age = 20;
+            const college = "Delhi University";
+
+            document.write("<table>");
+            document.write("<tr><th>Keyword</th><th>Definition</th></tr>");
+            document.write("<tr><td><b>var</b></td><td>Function-scoped, can be redeclared and updated.</td></tr>");
+            document.write("<tr><td><b>let</b></td><td>Block-scoped, can be updated but not redeclared.</td></tr>");
+            document.write("<tr><td><b>const</b></td><td>Block-scoped constant, cannot be reassigned.</td></tr>");
+            document.write("</table>");
+
+            document.write("<table>");
+            document.write("<tr><th>Variable</th><th>Value</th></tr>");
+            document.write("<tr><td>studentName (var)</td><td>" + studentName + "</td></tr>");
+            document.write("<tr><td>age (let)</td><td>" + age + "</td></tr>");
+            document.write("<tr><td>college (const)</td><td>" + college + "</td></tr>");
+            document.write("</table>");
+
+            //=========================================================
+            // DATA TYPES
+            //=========================================================
+            document.write("<h2>2. Data Types</h2>");
+            document.write("<p><b>Definition:</b> Data Types specify the type of value that a variable can store.</p>");
+
+            let number = 100;
+            let decimal = 99.99;
+            let text = "JavaScript";
+            let isPassed = true;
+            let employee = { id: 101, name: "David" };
+            let colors = ["Red", "Green", "Blue"];
+            let salary = null;
+            let address;
+
+            document.write("<table>");
+            document.write("<tr><th>Variable</th><th>Value</th><th>Data Type</th></tr>");
+            document.write("<tr><td>number</td><td>" + number + "</td><td>" + typeof(number) + "</td></tr>");
+            document.write("<tr><td>decimal</td><td>" + decimal + "</td><td>" + typeof(decimal) + "</td></tr>");
+            document.write("<tr><td>text</td><td>" + text + "</td><td>" + typeof(text) + "</td></tr>");
+            document.write("<tr><td>isPassed</td><td>" + isPassed + "</td><td>" + typeof(isPassed) + "</td></tr>");
+            document.write("<tr><td>employee</td><td>{id:101, name:'David'}</td><td>" + typeof(employee) + "</td></tr>");
+            document.write("<tr><td>colors</td><td>" + colors + "</td><td>" + typeof(colors) + "</td></tr>");
+            document.write("<tr><td>salary</td><td>" + salary + "</td><td>" + typeof(salary) + "</td></tr>");
+            document.write("<tr><td>address</td><td>" + address + "</td><td>" + typeof(address) + "</td></tr>");
+            document.write("</table>");
+
+            //=========================================================
+            // OPERATORS
+            //=========================================================
+            document.write("<h2>3. Operators</h2>");
+            document.write("<p><b>Definition:</b> Operators are special symbols used to perform operations on variables and values.</p>");
+
+            let a = 20;
+            let b = 10;
+
+            document.write("<table>");
+            document.write("<tr><th>Operator</th><th>Example</th><th>Result</th></tr>");
+            document.write("<tr><td>Addition (+)</td><td>a + b</td><td class='result'>" + (a + b) + "</td></tr>");
+            document.write("<tr><td>Subtraction (-)</td><td>a - b</td><td class='result'>" + (a - b) + "</td></tr>");
+            document.write("<tr><td>Multiplication (*)</td><td>a * b</td><td class='result'>" + (a * b) + "</td></tr>");
+            document.write("<tr><td>Division (/)</td><td>a / b</td><td class='result'>" + (a / b) + "</td></tr>");
+            document.write("<tr><td>Modulus (%)</td><td>a % b</td><td class='result'>" + (a % b) + "</td></tr>");
+            document.write("<tr><td>Greater Than (&gt;)</td><td>a &gt; b</td><td class='result'>" + (a > b) + "</td></tr>");
+            document.write("<tr><td>Less Than (&lt;)</td><td>a &lt; b</td><td class='result'>" + (a < b) + "</td></tr>");
+            document.write("<tr><td>Equal To (==)</td><td>a == b</td><td class='result'>" + (a == b) + "</td></tr>");
+            document.write("<tr><td>Not Equal (!=)</td><td>a != b</td><td class='result'>" + (a != b) + "</td></tr>");
+            document.write("</table>");
+
+            //=========================================================
+            // ASSIGNMENT OPERATORS
+            //=========================================================
+            document.write("<h2>4. Assignment Operators</h2>");
+            document.write("<p><b>Definition:</b> Assignment operators are used to assign and update values of variables.</p>");
+
+            let x = 10;
+            document.write("<table>");
+            document.write("<tr><th>Statement</th><th>Value of x</th></tr>");
+            document.write("<tr><td>Initial Value</td><td>" + x + "</td></tr>");
+            x += 5;
+            document.write("<tr><td>x += 5</td><td>" + x + "</td></tr>");
+            x -= 3;
+            document.write("<tr><td>x -= 3</td><td>" + x + "</td></tr>");
+            x *= 2;
+            document.write("<tr><td>x *= 2</td><td>" + x + "</td></tr>");
+            x /= 4;
+            document.write("<tr><td>x /= 4</td><td>" + x + "</td></tr>");
+            document.write("</table>");
+        </script>
+    </div>
+
+</body>
+</html>

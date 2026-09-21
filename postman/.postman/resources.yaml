@@ -1,0 +1,13 @@
+cloudResources:
+  collections:
+    ../postman/collections/ApexBank: 56894372-9b278b77-1f50-45f1-b22e-b50f4f111fd0
+    ../postman/collections/CBIT-API Testing: 56894372-4876e480-6d2c-4ca1-a544-bea4ab2d6742
+    ../postman/collections/New Collection: 56894372-0cb1c8af-3aac-4bfc-ab6d-658ede29961c
+    ../postman/collections/customer-soft: 56894372-8952db4c-d17d-4b61-a2b9-6be85bed666d
+    ../postman/collections/product-restapi: 56894372-903abcaf-866a-42b1-941c-8e2a9e2470f8
+  environments:
+    ../postman/environments/FakeStoreAPI.environment.yaml: 56894372-c87facd9-91a9-482b-aef2-01f7f04fbf53
+  globals:
+    ../postman/globals/workspace.globals.yaml: 8279179d-3faa-4b26-8683-e5c7d2f4f386
+workspace:
+  id: 05713d2a-214a-4f89-8f51-6500394ee210

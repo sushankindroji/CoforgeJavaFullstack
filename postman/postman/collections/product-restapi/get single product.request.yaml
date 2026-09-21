@@ -1,0 +1,5 @@
+$kind: http-request
+name: get single product
+url: http://localhost:8088/producthive/api/products/10
+method: GET
+order: 3158924395269147

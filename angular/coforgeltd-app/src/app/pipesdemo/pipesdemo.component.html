@@ -1,0 +1,47 @@
+<div class="pipes-container">
+  <h1>Pipes</h1>
+
+  <p>
+    Pipes are referred to as <strong>filters</strong>. They help transform and manage data within
+    interpolation, denoted by the <code>|</code> symbol.
+  </p>
+  <p>
+    Pipes accept data, arrays, integers, and strings as inputs separated by the <code>|</code> symbol.
+  </p>
+
+  <div class="pipes-content">
+    <div class="pipe-box">
+      <h2>Uppercase Pipe</h2>
+      <b>{{ title | uppercase }}</b><br />
+
+      <h2>Lowercase Pipe</h2>
+      <b>{{ title | lowercase }}</b>
+
+      <h2>Currency Pipe</h2>
+      <b>{{ 6589.23 | currency: 'INR' }}</b><br />
+      <b>{{ 6589.23 | currency: 'USD': true }}</b>
+
+      <h2>Date Pipe</h2>
+      <b>{{ todaydate }}</b><br />
+      <b>{{ todaydate | date: 'd/M/y' }}</b><br />
+      <b>{{ todaydate | date: 'shortTime' }}</b><br />
+      <b>{{ todaydate | date: 'fullDate' }}</b>
+
+      <h2>Decimal Pipe</h2>
+      <b>{{ 454.78787814 | number: '3.4-4' }}</b>
+    </div>
+
+    <div class="pipe-box">
+      <h2>Json Pipe</h2>
+      <b>{{ jsonval | json }}</b>
+
+      <h2>Percent Pipe</h2>
+      <b>{{ 0.54565 | percent }}</b>
+
+      <h2>Slice Pipe</h2>
+      <b>{{ months | slice: 2:6 }}</b>
+      <p class="note">// Here 2 and 6 refer to the start and end index.</p>
+    </div>
+  </div>
+</div>
+

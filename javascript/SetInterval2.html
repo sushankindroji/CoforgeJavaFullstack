@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval 2 - Live Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f4f4;
+        }
+        #timerdiv {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+        }
+        #date {
+            font-size: 1.5rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Live Clock</h1>
+    
+    <div id="timerdiv">Loading time...</div>
+    <div id="date"></div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            
+            // Live time (HH:MM:SS)
+            document.getElementById("timerdiv").innerHTML = now.toLocaleTimeString();
+            
+            // Date
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById("date").innerHTML = now.toLocaleDateString(undefined, options);
+        }
+
+        // Update immediately
+        updateClock();
+        
+        // Update every second
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>

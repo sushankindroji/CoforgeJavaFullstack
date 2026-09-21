@@ -1,0 +1,113 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f7;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1f3c88, #3b82f6);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.2);
+}
+
+.header h1{
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar{
+    background:#2c3e50;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    padding:15px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#00d4ff;
+    transform:translateY(-2px);
+}
+
+/* Main */
+.main-content{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.main-content h2{
+    color:#1f3c88;
+    margin-bottom:15px;
+}
+
+.main-content p{
+    line-height:1.7;
+    font-size:17px;
+}
+
+/* Logo */
+
+.logo{
+    width:320px;
+    margin:25px 0;
+    transition:.4s;
+}
+
+.logo:hover{
+    transform:scale(1.08) rotate(2deg);
+}
+
+/* Hobbies */
+
+ul{
+    width:220px;
+    margin:20px auto;
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background:#3b82f6;
+    color:white;
+    margin:10px 0;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+    font-weight:600;
+}
+
+li:hover{
+    transform:translateX(10px);
+    background:#1f3c88;
+}
+
+/* Footer */
+
+.footer{
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:40px;
+}

@@ -1,0 +1,38 @@
+<div class="app">
+  <header class="app-header">
+    <!-- Corner decorations -->
+    <div class="corner-decor tl"></div>
+    <div class="corner-decor tr"></div>
+    <div class="corner-decor bl"></div>
+    <div class="corner-decor br"></div>
+
+    <div class="app-logo-container">
+      <img src="/images/hive.png" class="app-logo" alt="Product Hive Logo">
+      <h1>PRODUCT HIVE</h1>
+    </div>
+
+
+    <app-navbar></app-navbar>
+
+    <!-- Bottom ornament -->
+    <div class="header-ornament"></div>
+  </header>
+
+  <div
+    class="app-content"
+    style="
+      background-image: url(/images/bg5.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  >
+    <section>
+      <!-- Displays child components -->
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 All Rights Reserved to Coforge Technologies</p>
+  </footer>
+</div>

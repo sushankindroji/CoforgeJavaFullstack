@@ -1,0 +1,281 @@
+/* Main Container */
+.container-dir {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Main Heading */
+.container-dir h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 35px;
+}
+
+/* Section Headings */
+.container-dir h3 {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+/* Description Text */
+.definition {
+    font-size: 1.15rem;
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+
+/* Toggle Button */
+button {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #1d4ed8, #4338ca);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+}
+
+/* Student Card */
+.card {
+    width: 420px;
+    margin: 25px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    backdrop-filter: blur(10px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2563eb;
+    font-size: 1.6rem;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+}
+
+li {
+    background: #f8fafc;
+    margin: 12px auto;
+    width: 320px;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #374151;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+li:hover {
+    transform: translateY(-3px);
+    background: #eff6ff;
+    box-shadow: 0 8px 20px rgba(37,99,235,0.15);
+}
+
+/* Divider */
+.container-dir hr {
+    border: none;
+    border-top: 2px solid #e5e7eb;
+    margin: 40px auto;
+    width: 80%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .container-dir {
+        padding: 20px;
+    }
+
+    .container-dir h2 {
+        font-size: 2.5rem;
+    }
+
+    .container-dir h3 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    li {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+}
+/* ========================= */
+/* ngClass & ngStyle Boxes   */
+/* ========================= */
+
+.box {
+    width: 320px;
+    margin: 12px auto;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    background: #ffffff;
+}
+
+.box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ngClass */
+
+.pass {
+    background: #dcfce7;
+    border-left: 6px solid #22c55e;
+    color: #166534;
+}
+
+.fail {
+    background: #fee2e2;
+    border-left: 6px solid #ef4444;
+    color: #991b1b;
+}
+
+
+/* ========================= */
+/* ngSwitch Buttons          */
+/* ========================= */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.buttons button {
+    width: 60px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+}
+
+
+/* ========================= */
+/* Switch Result Card        */
+/* ========================= */
+
+.switch-box {
+    width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.grade {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Grade Colors */
+
+.a {
+    background: #dcfce7;
+    color: #166534;
+    border-left: 6px solid #16a34a;
+}
+
+.b {
+    background: #dbeafe;
+    color: #1d4ed8;
+    border-left: 6px solid #2563eb;
+}
+
+.c {
+    background: #fef9c3;
+    color: #854d0e;
+    border-left: 6px solid #eab308;
+}
+
+.d {
+    background: #fee2e2;
+    color: #991b1b;
+    border-left: 6px solid #dc2626;
+}
+
+
+/* ========================= */
+/* Section Spacing           */
+/* ========================= */
+
+.container-dir h3 {
+    margin-top: 40px;
+}
+
+.definition {
+    margin-bottom: 20px;
+}
+
+
+/* ========================= */
+/* Responsive                */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .box,
+    .switch-box {
+        width: 95%;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .buttons button {
+        width: 55px;
+        height: 42px;
+    }
+}

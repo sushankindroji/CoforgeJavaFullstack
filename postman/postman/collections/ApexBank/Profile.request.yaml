@@ -1,0 +1,9 @@
+$kind: http-request
+name: Profile
+url: http://localhost:8080/api/dashboard/profile
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{supabase_service_role_api_key_0l3v}}"
+order: 4448547051647953

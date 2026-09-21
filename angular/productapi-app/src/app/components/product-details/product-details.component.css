@@ -1,0 +1,281 @@
+/* ===========================================
+        APPLE LIQUID GLASS PRODUCT DETAILS
+=========================================== */
+
+:host{
+    display:block;
+    min-height:100vh;
+
+    background:
+        radial-gradient(circle at top left,#f8fbff 0%,#edf4ff 35%,#e6edf8 70%,#dfe7f4 100%);
+
+    padding:60px 20px;
+
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",
+    "SF Pro Text","Segoe UI",sans-serif;
+}
+
+/* Container */
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Glass Card */
+
+.card{
+
+    width:100%;
+    max-width:650px;
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(35px) saturate(180%);
+    -webkit-backdrop-filter:blur(35px) saturate(180%);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 25px 60px rgba(15,23,42,.12),
+        inset 0 1px rgba(255,255,255,.8);
+
+    transition:.45s ease;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 35px 80px rgba(15,23,42,.18),
+        inset 0 1px rgba(255,255,255,.95);
+
+}
+
+/* Header */
+
+.card-header{
+
+    background:linear-gradient(
+    135deg,
+    rgba(255,255,255,.35),
+    rgba(255,255,255,.12));
+
+    backdrop-filter:blur(25px);
+
+    border:none;
+
+    padding:30px;
+}
+
+.card-title{
+
+    margin:0;
+
+    text-align:center;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    color:#1d1d1f;
+}
+
+/* Body */
+
+.card-body{
+
+    padding:35px;
+}
+
+/* List */
+
+.list-group{
+
+    gap:15px;
+}
+
+.list-group-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:18px 22px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.9),
+        0 8px 20px rgba(15,23,42,.05);
+}
+
+.list-group-item:hover{
+
+    transform:translateX(8px);
+
+    background:rgba(255,255,255,.78);
+
+    box-shadow:
+        0 15px 35px rgba(15,23,42,.08),
+        inset 0 1px white;
+}
+
+/* Labels */
+
+.label{
+
+    font-weight:700;
+
+    color:#6e6e73;
+
+    min-width:170px;
+}
+
+/* Values */
+
+.value{
+
+    font-size:1.08rem;
+
+    font-weight:600;
+
+    color:#1d1d1f;
+
+    text-align:right;
+}
+
+/* Footer */
+
+.card-footer{
+
+    background:transparent;
+
+    border:none;
+
+    padding:30px;
+
+    text-align:center;
+}
+
+/* Apple Button */
+
+.btn-success{
+
+    border:none;
+
+    border-radius:999px;
+
+    padding:14px 40px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(
+    135deg,
+    #0A84FF,
+    #5AC8FA);
+
+    box-shadow:
+        0 15px 30px rgba(10,132,255,.35);
+
+    transition:.35s;
+}
+
+.btn-success:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 22px 40px rgba(10,132,255,.45);
+
+    background:linear-gradient(
+    135deg,
+    #007AFF,
+    #64D2FF);
+}
+
+.btn-success:active{
+
+    transform:scale(.97);
+}
+
+/* Scroll animation */
+
+.card{
+
+    animation:appear .8s ease;
+}
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+        transform:translateY(35px) scale(.95);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.card{
+
+    border-radius:24px;
+}
+
+.card-title{
+
+    font-size:1.6rem;
+}
+
+.list-group-item{
+
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+}
+
+.label{
+
+    min-width:auto;
+}
+
+.value{
+
+    text-align:left;
+}
+
+.btn-success{
+
+    width:100%;
+}
+}

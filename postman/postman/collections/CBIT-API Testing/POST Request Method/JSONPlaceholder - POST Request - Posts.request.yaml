@@ -1,0 +1,12 @@
+$kind: http-request
+url: https://jsonplaceholder.typicode.com/posts
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "title": "Selenium API Testing",
+      "body": "Testing POST request using Postman",
+      "userId": 1
+    }
+order: 4313627167895012

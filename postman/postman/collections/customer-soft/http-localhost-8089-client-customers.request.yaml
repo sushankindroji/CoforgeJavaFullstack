@@ -1,0 +1,6 @@
+$kind: http-request
+name: http://localhost:8089/client/customers
+description: ""
+url: http://localhost:8089/client/customers
+method: GET
+order: 4495425091766561

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceanic Airlines</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        :root {
+            --primary: #00aaff;
+            --accent: #ff8800;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #a0d8ff;
+            background-image: url('https://picsum.photos/id/1015/1920/1080'); /* Ocean texture */
+            background-size: cover;
+            background-attachment: fixed;
+            background-blend-mode: overlay;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #00aaff, #0088cc);
+            padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Playfair Display', cursive;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        nav {
+            background: #00aaff;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav li {
+            position: relative;
+            margin: 0 5px;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 25px 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            background: #ff8800;
+            transition: all 0.5s ease;
+            position: relative;
+            top: 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        /* Tab arrow using pseudo-element */
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #ff8800;
+            opacity: 1;
+            transition: opacity 0.1s ease;
+        }
+
+        nav a:hover {
+            background: linear-gradient(#ffaa33, #ff8800);
+            top: -8px;
+            box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+            height: auto;
+        }
+
+        nav a:hover::before {
+            opacity: 0;
+        }
+
+        .main-content {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .hero img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        h1 {
+            color: #00aaff;
+            margin-bottom: 20px;
+        }
+
+        .columns {
+            display: flex;
+            gap: 40px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .column h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 136, 204, 0.9);
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Placeholder for logo -->
+            <img src="https://via.placeholder.com/60x60/00aaff/ffffff?text=✈️" alt="Oceanic Airlines Logo">
+            Oceanic Airlines
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Upcoming Flights</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Travel Guide</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="hero">
+            <img src="https://picsum.photos/id/1015/1200/400" alt="Tropical Paradise" style="width:100%;">
+        </div>
+        
+        <div class="content">
+            <h1>Welcome!</h1>
+            <p>Looking to lose yourself? Take a trip with Oceanic Airlines! Experience the fun and adventure of a destination unlike any other. Regardless of what you have in mind, we promise you a trip you'll never forget. Relax with us and watch new worlds open!</p>
+            
+            <div class="columns">
+                <div class="column">
+                    <h3>For Standard Travelers</h3>
+                    <ul>
+                        <li>Relaxed seating options</li>
+                        <li>Find out why our flights are so unique</li>
+                        <li>Read our customer gallery</li>
+                        <li>More Travel Resources</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>For "Others"</h3>
+                    <ul>
+                        <li>Effects of accommodations</li>
+                        <li>Things on our aircraft</li>
+                        <li>More Travel Resources</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2026 Oceanic Airlines</p>
+        <p>All images display properly as specified in the assignment handout.</p>
+    </footer>
+</body>
+</html>

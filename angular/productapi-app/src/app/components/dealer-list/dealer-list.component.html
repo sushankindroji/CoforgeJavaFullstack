@@ -1,0 +1,135 @@
+<div class="dealer-container">
+  <!-- Animated Header -->
+  <div class="dealer-header">
+    <h2 class="dealer-title">
+      <span class="title-text">Dealer Information</span>
+      <span class="title-icon">👥</span>
+    </h2>
+    <div class="dealer-subtitle">Manage and view dealer details</div>
+  </div>
+
+  <!-- Loading Animation -->
+  <div *ngIf="loading" class="loading-overlay">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Loading dealer data...</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="dealer-content">
+    <!-- Table Container -->
+    <div class="table-container" [class.loading]="loading">
+      <div class="table-scroll">
+        <table class="dealer-table">
+          <thead>
+            <tr>
+              <th scope="col" class="serial-number">
+                <span class="column-icon">#</span>
+                ID
+              </th>
+              <th scope="col">
+                <span class="column-icon">👤</span>
+                First Name
+              </th>
+              <th scope="col">
+                <span class="column-icon">👥</span>
+                Last Name
+              </th>
+              <th scope="col">
+                <span class="column-icon">📱</span>
+                Phone Number
+              </th>
+              <th scope="col">
+                <span class="column-icon">✉️</span>
+                Email
+              </th>
+              <th scope="col">
+                <span class="column-icon">🏠</span>
+                Street
+              </th>
+              <th scope="col">
+                <span class="column-icon">🏙️</span>
+                City
+              </th>
+              <th scope="col">
+                <span class="column-icon">📍</span>
+                Pincode
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dealer of dealerList; let i = index" 
+                class="table-row"
+                [class.fade-in]="i < 20">
+              <td class="serial-cell">
+                <span class="serial-badge">{{ dealer.id }}</span>
+              </td>
+              <td>
+                <span class="data-highlight">{{ dealer.fname | uppercase }}</span>
+              </td>
+              <td>
+                <span class="data-highlight">{{ dealer.lname | uppercase }}</span>
+              </td>
+              <td>
+                <span class="phone-data">
+                  <span class="phone-icon">📞</span>
+                  {{ dealer.phoneNo }}
+                </span>
+              </td>
+              <td>
+                <a href="mailto:{{ dealer.email }}" class="email-link">
+                  {{ dealer.email }}
+                </a>
+              </td>
+              <td>{{ dealer.street }}</td>
+              <td>
+                <span class="city-badge">{{ dealer.city }}</span>
+              </td>
+              <td>
+                <span class="pincode-badge">{{ dealer.pincode }}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="dealerList.length === 0 && !loading" class="empty-state">
+      <div class="empty-icon">📋</div>
+      <h3>No Dealers Found</h3>
+      <p>No dealer information is currently available.</p>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="error-message">
+      <div class="error-content">
+        <div class="error-icon">⚠️</div>
+        <div class="error-text">
+          <h4>Error Loading Data</h4>
+          <p>{{ errorMessage }}</p>
+        </div>
+        <button class="error-close" (click)="errorMessage = ''">
+          <span class="close-icon">×</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Stats Footer -->
+    <div class="stats-footer">
+      <div class="stats-item">
+        <div class="stats-value">{{ dealerList.length }}</div>
+        <div class="stats-label">Total Dealers</div>
+      </div>
+      <div class="stats-item">
+        <div class="stats-value">{{ getUniqueCities() }}</div>
+        <div class="stats-label">Cities</div>
+      </div>
+      <div class="stats-item">
+        <div class="stats-value">{{ getTodayDate() }}</div>
+        <div class="stats-label">Last Updated</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,274 @@
+/* ==========================================
+        APPLE LIQUID GLASS LOGOUT PAGE
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+/*=============================
+        PAGE
+=============================*/
+
+.logout-container{
+
+    width:100%;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
+}
+
+/*=============================
+        CARD
+=============================*/
+
+.logout-card{
+
+    width:600px;
+    max-width:100%;
+
+    padding:45px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(30px);
+    -webkit-backdrop-filter:blur(30px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    border-radius:30px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.12),
+        inset 0 1px 0 rgba(255,255,255,.8);
+
+    animation:floatCard 6s ease-in-out infinite;
+}
+
+/*=============================
+        HEADINGS
+=============================*/
+
+.logout-card h1{
+
+    font-size:36px;
+
+    font-weight:800;
+
+    color:#1e293b;
+
+    margin-bottom:12px;
+}
+
+.logout-card h2{
+
+    margin-top:25px;
+
+    color:#475569;
+
+    font-size:24px;
+
+    font-weight:600;
+}
+
+/*=============================
+        IMAGE
+=============================*/
+
+.image-container{
+
+    margin:35px 0;
+}
+
+.image-container img{
+
+    width:220px;
+
+    max-width:100%;
+
+    animation:runFloat 4s ease-in-out infinite;
+}
+
+/*=============================
+        BUTTONS
+=============================*/
+
+.action-buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.action-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:18px;
+
+    padding:16px 28px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.35s;
+}
+
+.btn-primary{
+
+    color:white;
+
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 45px rgba(37,99,235,.35);
+}
+
+.btn-secondary{
+
+    background:rgba(255,255,255,.45);
+
+    color:#1e293b;
+
+    border:1px solid rgba(255,255,255,.6);
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-4px);
+
+    background:white;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.btn-icon{
+
+    font-size:18px;
+}
+
+/*=============================
+        FOOTER
+=============================*/
+
+.footer-message{
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.5);
+}
+
+.footer-message p{
+
+    margin:8px 0;
+
+    color:#64748b;
+
+    font-size:15px;
+
+    line-height:1.6;
+}
+
+/*=============================
+        ANIMATIONS
+=============================*/
+
+@keyframes floatCard{
+
+    0%,100%{
+
+        transform:translateY(0px);
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+    }
+}
+
+@keyframes runFloat{
+
+    0%,100%{
+
+        transform:translateY(0px);
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+    }
+}
+
+/*=============================
+        RESPONSIVE
+=============================*/
+
+@media(max-width:768px){
+
+.logout-card{
+
+    padding:30px 20px;
+}
+
+.logout-card h1{
+
+    font-size:28px;
+}
+
+.logout-card h2{
+
+    font-size:20px;
+}
+
+.image-container img{
+
+    width:170px;
+}
+
+.action-buttons{
+
+    flex-direction:column;
+}
+
+.action-btn{
+
+    width:100%;
+}
+
+}

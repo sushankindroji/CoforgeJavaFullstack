@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2. Employee Attendance</title>
+</head>
+<body>
+    <h2>Employee Attendance</h2>
+    <input type="text" id="empId" placeholder="Employee ID"><br><br>
+    <input type="text" id="empName" placeholder="Employee Name"><br><br>
+    <button id="checkIn">Check In</button>
+    <button id="checkOut">Check Out</button>
+    <p id="status"></p>
+    <p id="time"></p>
+
+    <script>
+        const checkInBtn = document.getElementById('checkIn');
+        const checkOutBtn = document.getElementById('checkOut');
+        const statusEl = document.getElementById('status');
+        const timeEl = document.getElementById('time');
+
+        checkInBtn.addEventListener('click', () => {
+            const now = new Date().toLocaleString();
+            timeEl.textContent = `Checked In at: ${now}`;
+            statusEl.textContent = 'Present';
+            statusEl.style.color = 'green';
+        });
+
+        checkOutBtn.addEventListener('click', () => {
+            const now = new Date().toLocaleString();
+            timeEl.textContent = `Checked Out at: ${now}`;
+            statusEl.textContent = 'Checked Out';
+            statusEl.style.color = 'orange';
+        });
+    </script>
+</body>
+</html>

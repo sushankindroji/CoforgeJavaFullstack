@@ -1,0 +1,65 @@
+.login-container {
+  max-width: 350px;
+  margin: 80px auto;
+  padding: 25px;
+  background: linear-gradient(145deg, #f5f7fa, #e4ebf5);
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+input.ng-valid.ng-touched {
+  border-color: green;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #28a745;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: #218838;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exception Handling</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            line-height: 1.6;
+        }
+        h2 { color: #333; }
+        #output { 
+            margin-top: 20px; 
+            padding: 15px; 
+            background: #f8f9fa; 
+            border: 1px solid #ddd; 
+            border-radius: 8px;
+        }
+        .error { color: #d32f2f; font-weight: bold; }
+        .success { color: #388e3c; }
+        p { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Exception Handling Example</h2>
+    <div id="output"></div>
+
+    <script>
+        const output = document.getElementById("output");
+
+        function addOutput(message, type = "") {
+            const className = type === "error" ? "error" : type === "success" ? "success" : "";
+            output.innerHTML += `<p class="${className}">${message}</p>`;
+        }
+
+        // Example 1: Basic try-catch - ReferenceError
+        try {
+            let x = undefinedVariable; // This will throw ReferenceError
+        } catch (error) {
+            addOutput(`<b>Example 1 (ReferenceError):</b> ${error.message}`, "error");
+        }
+
+        // Example 2: Custom error with throw + finally
+        function withdraw(amount, balance) {
+            try {
+                if (amount > balance) {
+                    throw new Error("Insufficient Balance!");
+                }
+                return `✅ Withdrawn ₹${amount}, Remaining Balance ₹${balance - amount}`;
+            } catch (err) {
+                return `❌ Error: ${err.message}`;
+            } finally {
+                addOutput("<i>Transaction attempted (finally block executed)</i>");
+            }
+        }
+
+        const result = withdraw(5000, 2000);
+        addOutput(`<b>Example 2:</b> ${result}`);
+
+        // Example 3: JSON parsing
+        const validJson = '{"name":"John", "age":30}';
+        const invalidJson = '{"name":"John", "age":}'; // Invalid JSON
+
+        try {
+            const user = JSON.parse(validJson);
+            addOutput(`<b>Example 3 (Valid JSON):</b> Name = ${user.name}, Age = ${user.age}`, "success");
+        } catch (e) {
+            addOutput(`Error parsing valid JSON: ${e.message}`, "error");
+        }
+
+        try {
+            const user = JSON.parse(invalidJson); // Will throw SyntaxError
+        } catch (e) {
+            addOutput(`<b>Example 3 (Invalid JSON):</b> ${e.message}`, "error");
+        }
+
+        // Bonus Example: TypeError
+        try {
+            const num = 123;
+            num.toUpperCase(); // TypeError: num.toUpperCase is not a function
+        } catch (e) {
+            addOutput(`<b>Bonus Example (TypeError):</b> ${e.message}`, "error");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Methods Example</title>
+    <style>
+        .highlight { background-color:  yellow;}
+        .box{
+            width: 100px;
+            height:100px;
+            background-color: lightblue;
+            margin:10px;
+            display:inline-block;
+            border-radius:20px;
+
+        }
+         h2{
+            color:darkblue;
+        }
+        p{
+            color:black;
+        }
+        .demo{
+            color:green;
+            font-weight:bold;
+        }
+        button{
+            padding:10px 15px;
+            margin:5px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2 id="title">JavaScript DOM Methods Demo</h2>
+
+    <p class="demo">Paragraph 1</p>
+    <p class="demo">Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p id="hello"> DOM Attributes innerHTML in JS</p>
+        <p id="hello1">DOM Attributes textContent</p>
+
+    <button onclick="byId()">getElementById()</button>
+    <button onclick="byClass()">getElementsByClassName()</button>
+    <button onclick="byTag()">getElementsByTagName()</button>
+    <button onclick="byQuery()">querySelector()</button>
+    <button onclick="byQueryAll()">querySelectorAll()</button>
+
+    <button onclick="changeContent()">innerHTML-text content</button>
+</div>
+<script>
+
+    function changeContent(){
+        document.getElementById("hello").innerHTML="Hello from <strong> DOM Programming </strong> in JS";
+        document.getElementById("hello").textContent="DOM is an API between JS & HTML";
+    }
+
+    function byId(){
+        document.getElementById("title").innerHTML="Changed using getElementById()";
+    }
+
+    function byClass(){
+        var x = document.getElementsByClassName("demo");
+        x[0].style.color="red";
+        x[1].style.color="blue";
+    }
+
+    function byTag(){
+        var p=document.getElementsByTagName("p");
+        p[2].innerHTML="Changed using getElementsByTagName()";
+    }
+
+    function byQuery(){
+        document.querySelector(".demo").style.backgroundColor="yellow";
+    }
+    function byQueryAll(){
+        var all=document.querySelectorAll("p");
+        for(var i=0; i<all.length;i++){
+            all[i].style.fontSize="22px";
+        }
+    }
+</script>
+    
+</body>
+</html>

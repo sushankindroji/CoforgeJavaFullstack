@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions Demo</title>
+</head>
+<body>
+
+<h2>Normal Function vs Arrow Function Examples</h2>
+
+<div id="output"></div>
+
+<h2>Arrow Functions in JavaScript</h2>
+
+<p>
+Arrow functions in JavaScript, introduced in ES6, provide a concise syntax
+for writing function expressions. They are a more compact alternative to
+traditional function expressions and offer a different handling of the
+<strong>this</strong> keyword.
+</p>
+
+<h3>When to Use Arrow Functions:</h3>
+<ul>
+    <li><strong>Callbacks:</strong> In array methods like map(), filter(), reduce().</li>
+    <li><strong>Short functions:</strong> Single-line functions with implicit return.</li>
+    <li><strong>this context:</strong> When you want to use the surrounding <code>this</code>.</li>
+</ul>
+
+<script>
+const output = document.getElementById("output");
+
+// 1. Add two numbers
+function addNormal(a, b) {
+    return a + b;
+}
+const addArrow = (a, b) => a + b;
+
+output.innerHTML += `<p><b>1. Add (Normal):</b> ${addNormal(5,10)}</p>`;
+output.innerHTML += `<p><b>1. Add (Arrow):</b> ${addArrow(5,10)}</p>`;
+
+// 2. Square
+function squareNormal(n) {
+    return n * n;
+}
+const squareArrow = n => n * n;
+
+output.innerHTML += `<p><b>2. Square (Normal):</b> ${squareNormal(6)}</p>`;
+output.innerHTML += `<p><b>2. Square (Arrow):</b> ${squareArrow(6)}</p>`;
+
+// 3. Greeting
+function greetNormal() {
+    return "Hello from Normal Function!";
+}
+const greetArrow = () => "Hello from Arrow Function!";
+
+output.innerHTML += `<p><b>3.</b> ${greetNormal()}</p>`;
+output.innerHTML += `<p><b>3.</b> ${greetArrow()}</p>`;
+
+// 4. Filter
+const numbers = [1,2,3,4,5,6];
+
+const evenNormal = numbers.filter(function(num){
+    return num % 2 === 0;
+});
+
+const evenArrow = numbers.filter(num => num % 2 === 0);
+
+output.innerHTML += `<p><b>4. Even Numbers (Normal):</b> ${evenNormal.join(", ")}</p>`;
+output.innerHTML += `<p><b>4. Even Numbers (Arrow):</b> ${evenArrow.join(", ")}</p>`;
+
+// 5. Returning Objects
+function createUserNormal(name, age){
+    return {name:name, age:age};
+}
+
+const createUserArrow = (name, age) => ({name, age});
+
+output.innerHTML += `<p><b>5. User (Normal):</b> ${JSON.stringify(createUserNormal("Alice",25))}</p>`;
+output.innerHTML += `<p><b>5. User (Arrow):</b> ${JSON.stringify(createUserArrow("Bob",30))}</p>`;
+
+// 6. Simple Arrow Function
+const add = (a,b) => a+b;
+output.innerHTML += `<p><b>6.</b> Sum of 5 + 10 = ${add(5,10)}</p>`;
+
+// 7. Arrow Function with map()
+const fruits = ["apple","banana","cherry"];
+const upperFruits = fruits.map(fruit => fruit.toUpperCase());
+
+output.innerHTML += `<p><b>7.</b> Uppercase Fruits = ${upperFruits.join(", ")}</p>`;
+
+// 8. setTimeout()
+setTimeout(() => {
+    output.innerHTML += `<p><b>8.</b> ⏰ This message appeared after 2 seconds.</p>`;
+}, 2000);
+
+// 9. forEach()
+numbers.forEach(num => console.log("Number:", num));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1. Student Registration</title>
+    <style> .error { color: red; font-size: 0.9em; } </style>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form id="regForm" onsubmit="validateForm(event)">
+        <label>Name: <input type="text" id="name"></label><span class="error" id="nameErr"></span><br><br>
+        <label>Email: <input type="email" id="email"></label><span class="error" id="emailErr"></span><br><br>
+        <label>Mobile: <input type="text" id="mobile" maxlength="10"></label><span class="error" id="mobileErr"></span><br><br>
+        <label>Password: <input type="password" id="password"></label><span class="error" id="passErr"></span><br><br>
+        <label>Confirm Password: <input type="password" id="cpassword"></label><span class="error" id="cpassErr"></span><br><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        function validateForm(e) {
+            e.preventDefault();
+            let isValid = true;
+            
+            // Clear errors
+            document.querySelectorAll('.error').forEach(el => el.textContent = '');
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const pass = document.getElementById('password').value;
+            const cpass = document.getElementById('cpassword').value;
+            
+            if (!name) { document.getElementById('nameErr').textContent = 'Name is required'; isValid = false; }
+            if (!email || !email.includes('@')) { document.getElementById('emailErr').textContent = 'Invalid email'; isValid = false; }
+            if (!/^\d{10}$/.test(mobile)) { document.getElementById('mobileErr').textContent = 'Exactly 10 digits required'; isValid = false; }
+            if (pass.length < 8) { document.getElementById('passErr').textContent = 'Min 8 characters'; isValid = false; }
+            if (pass !== cpass) { document.getElementById('cpassErr').textContent = 'Passwords do not match'; isValid = false; }
+            
+            if (isValid) alert('Registration Successful!');
+        }
+    </script>
+</body>
+</html>

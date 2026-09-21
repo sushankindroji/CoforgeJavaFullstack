@@ -1,0 +1,17 @@
+$kind: http-request
+name: REGISTER INTERNET BANKING
+description: ""
+url: http://localhost:8080/api/auth/register
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "accountNumber": "100000000016",
+      "otp": "522203",
+      "loginPassword": "Password@123",
+      "confirmLoginPassword": "Password@123",
+      "transactionPassword": "TxnPass@123",
+      "confirmTransactionPassword": "TxnPass@123"
+    }
+order: 4195405844022151

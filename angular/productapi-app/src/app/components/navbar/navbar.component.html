@@ -1,0 +1,111 @@
+<nav class="navbar">
+
+  <ul class="nav-list">
+
+
+    <!-- =========================
+          NEW USERS (NOT LOGGED IN)
+    ========================== -->
+
+    <ng-container *ngIf="!isUserLoggedIn">
+
+      <li class="nav-item">
+        <a routerLink="/home">
+          Home
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a routerLink="/register">
+          Register
+        </a>
+      </li>
+
+      
+      <li class="nav-item">
+        <a routerLink="/login">
+          Login
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a routerLink="/aboutus">
+          About Us
+        </a>
+      </li>
+
+    </ng-container>
+
+
+
+    <!-- =========================
+          LOGGED IN USERS
+    ========================== -->
+
+    <ng-container *ngIf="isUserLoggedIn">
+
+
+      <li class="nav-item">
+        <a routerLink="/home">
+          Home
+        </a>
+      </li>
+
+      
+      <li class="nav-item">
+        <a routerLink="/products">
+          Products
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a routerLink="/search">
+          Search Products
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a routerLink="/dealers">
+          Dealers Info
+        </a>
+      </li>
+
+
+
+      <li class="nav-item">
+        <a 
+          href="javascript:void(0)" 
+          (click)="handleLogout()">
+          Logout
+        </a>
+      </li>
+
+
+
+      <li class="nav-item user-info">
+
+        <span class="user-style">
+
+          Welcome : {{ username }}
+
+          <img
+            class="avatar"
+            src="images/avatar.png"
+            alt="Avatar"
+          />
+
+        </span>
+
+      </li>
+
+
+    </ng-container>
+
+
+  </ul>
+
+</nav>

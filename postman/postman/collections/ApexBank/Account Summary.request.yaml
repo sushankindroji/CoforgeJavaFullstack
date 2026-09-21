@@ -1,0 +1,9 @@
+$kind: http-request
+name: Account Summary
+url: http://localhost:8080/api/dashboard/account-summary
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0l3v}}"
+order: 4475693088037502

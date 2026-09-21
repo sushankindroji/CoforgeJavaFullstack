@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe Animation Demo</title>
+    
+    <style>
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: relative;
+            animation: myturn 2s infinite;
+            margin: 50px auto; /* Centers the box */
+        }
+
+        @keyframes myturn {
+            0%   { 
+                top: 0px; 
+                left: 0px; 
+                background: blue; 
+            }
+            25%  { 
+                top: 0px; 
+                left: 100px; 
+                background: green; 
+            }
+            50%  { 
+                top: 100px; 
+                left: 100px; 
+                background: red; 
+            }
+            75%  { 
+                top: 100px; 
+                left: 0px; 
+                background: black; 
+            }
+            100% { 
+                top: 0px; 
+                left: 0px; 
+                background: grey; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>The KeyFrame Rule for Animations</h1>
+    
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+$kind: http-request
+name: SEND OTP (Register)
+url: http://localhost:8080/api/auth/send-otp
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "identifier": "100000000016",
+      "purpose": "REGISTER"
+    }
+order: 3752405260771013

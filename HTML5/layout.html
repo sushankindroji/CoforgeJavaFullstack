@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Layout</title>
+
+    <style>
+        /* Reset CSS */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        /* Body */
+        body{
+            background-color:#f2f2f2;
+        }
+
+        /* Container */
+        .container{
+            width:90%;
+            margin:auto;
+        }
+
+        /* Header */
+        header{
+            background-color:#0d6efd;
+            color:white;
+            padding:20px;
+        }
+
+        .header-content{
+            text-align:center;
+        }
+
+        /* Navigation */
+        nav{
+            background-color:#343a40;
+        }
+
+        .nav-content ul{
+            list-style:none;
+            display:flex;
+            justify-content:center;
+        }
+
+        .nav-content ul li{
+            padding:15px 20px;
+        }
+
+        .nav-content ul li a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .nav-content ul li:hover{
+            background-color:#495057;
+        }
+
+        /* Main */
+        main{
+            background:white;
+            padding:30px;
+            margin-top:20px;
+            border-radius:8px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .main-content{
+            text-align:center;
+        }
+
+        .main-content h2{
+            margin-bottom:15px;
+            color:#0d6efd;
+        }
+
+        .main-content p{
+            margin:10px 0;
+            color:#555;
+        }
+
+        /* Footer */
+        footer{
+            background-color:#212529;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+
+        .footer-content{
+            font-size:16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>My Website</h1>
+            <p>Welcome to HTML5 Layout</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <div class="main-content">
+            <h2>Welcome</h2>
+            <p>This is the main content area of the webpage.</p>
+            <p>HTML5 semantic tags improve readability and SEO.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 My Website. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

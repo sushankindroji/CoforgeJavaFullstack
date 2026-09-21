@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 2D & 3D Transformations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            color: #333;
+            text-align: center;
+        }
+
+        .transformations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .transformations div {
+            width: 160px;
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orangered;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Hover Effects */
+        .translate:hover {
+            transform: translate(80px, 60px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .scale:hover {
+            transform: scale(1.3);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .skew:hover {
+            transform: skew(20deg, 15deg);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .rotate3d:hover {
+            transform: rotate3d(1, 1, 0, 60deg) perspective(600px);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Optional: Add labels below each box */
+        .label {
+            text-align: center;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 2D &amp; 3D Transformations</h1>
+
+    <div class="transformations">
+        <div>
+            <div class="translate">Translate</div>
+            <div class="label">translate()</div>
+        </div>
+        
+        <div>
+            <div class="rotate">Rotate</div>
+            <div class="label">rotate()</div>
+        </div>
+        
+        <div>
+            <div class="scale">Scale</div>
+            <div class="label">scale()</div>
+        </div>
+        
+        <div>
+            <div class="skew">Skew</div>
+            <div class="label">skew()</div>
+        </div>
+        
+        <div>
+            <div class="rotate3d">Rotate 3D</div>
+            <div class="label">rotate3d()</div>
+        </div>
+    </div>
+
+</body>
+</html>

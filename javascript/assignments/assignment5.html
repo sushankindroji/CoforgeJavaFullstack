@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 5 - Get Form Values</title>
+</head>
+<body>
+    <form id="form1" onsubmit="getFormvalue(event)">
+        First name: <input type="text" name="fname" value="David"><br><br>
+        Last name: <input type="text" name="lname" value="Beckham"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function getFormvalue(e) {
+            e.preventDefault(); // Prevent page refresh
+            const fname = document.querySelector('input[name="fname"]').value;
+            const lname = document.querySelector('input[name="lname"]').value;
+            
+            alert("First Name: " + fname + "\nLast Name: " + lname);
+            console.log("Full Name:", fname, lname);
+        }
+    </script>
+</body>
+</html>

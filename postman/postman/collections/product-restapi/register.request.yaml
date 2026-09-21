@@ -1,0 +1,21 @@
+$kind: http-request
+name: register
+url: http://localhost:8088/producthive/api/register
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "email": "amelie.dubois@example.fr",
+        "fname": "Amelie",
+        "lname": "Dubois",
+        "password": "Paris#Love2024",
+        "dob": "1991-10-10",
+        "phoneNo": "33612345678",
+        "address": {
+          "street": "10 Rue de la Paix",
+          "city": "Paris",
+          "pincode": 75002
+        }
+      }
+order: 4479522903926178

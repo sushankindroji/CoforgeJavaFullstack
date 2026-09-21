@@ -1,0 +1,13 @@
+{
+  "customers_rows": 9,
+  "products_rows": 6,
+  "orders_rows": 14,
+  "customer_missing_columns": [],
+  "product_missing_columns": [],
+  "order_missing_columns": [],
+  "duplicate_customer_keys": 1,
+  "null_customer_email": 1,
+  "null_customer_city": 1,
+  "invalid_order_quantity": 1,
+  "invalid_order_price": 1
+}

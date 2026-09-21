@@ -1,0 +1,12 @@
+name: FakestoreAPI
+values:
+  - key: AppUrl
+    value: ''
+  - key: title
+    value: ''
+  - key: price
+    value: ''
+  - key: description
+    value: ''
+  - key: category
+    value: ''

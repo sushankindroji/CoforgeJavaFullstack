@@ -1,0 +1,16 @@
+$kind: http-request
+name: Account Statement
+url: http://localhost:8080/api/dashboard/statement
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "fromDate": "2025-01-01",
+      "toDate": "2026-12-31"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{supabase_service_role_api_key_0l3v}}"
+order: 4490081654548175

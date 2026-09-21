@@ -1,0 +1,14 @@
+$kind: http-request
+url: https://jsonplaceholder.typicode.com/users
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "name": "Sushank Indroji",
+      "username": "sushank",
+      "email": "sushank@test.com",
+      "phone": "9876543210",
+      "website": "example.com"
+    }
+order: 4497747510229902

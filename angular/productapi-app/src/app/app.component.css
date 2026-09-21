@@ -1,0 +1,352 @@
+/* ==========================================
+   APPLE VISION OS  –  FULL APP SHELL
+========================================== */
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.38);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-highlight: rgba(255, 255, 255, 0.9);
+  --text-primary: #1f2937;
+  --text-secondary: #64748b;
+  --accent: #0071e3;
+  --shadow-soft: 0 20px 45px rgba(17, 24, 39, 0.08),
+                 0 8px 20px rgba(17, 24, 39, 0.05);
+  --shadow-hover: 0 30px 60px rgba(17, 24, 39, 0.12);
+  --radius-xl: 34px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --blur: blur(40px) saturate(180%);
+}
+
+/* ---------- App Shell ---------- */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at top, #f7fbff 0%, #eef5ff 30%, #e8edf6 65%, #dfe8f5 100%);
+  font-family: "SF Pro Display", "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   HEADER  –  Floating Glass Capsule
+========================================== */
+.app-header {
+  position: relative;
+  margin: 28px 32px 0;
+  padding: 22px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  box-shadow:
+    inset 0 1px 1px var(--glass-highlight),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.25),
+    var(--shadow-soft);
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: glassFloat 9s ease-in-out infinite;
+  z-index: 100;
+}
+
+.app-header:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 1),
+    var(--shadow-hover);
+}
+
+/* Floating light layers */
+.app-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.9), transparent 38%),
+    radial-gradient(circle at 82% 8%, rgba(170, 210, 255, 0.5), transparent 48%),
+    radial-gradient(circle at 50% 130%, rgba(255, 255, 255, 0.35), transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Soft inner glow ring */
+.app-header::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: calc(var(--radius-xl) - 1px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------- Logo ---------- */
+.app-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  z-index: 2;
+}
+
+.app-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(28px);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.95),
+    0 12px 28px rgba(0, 0, 0, 0.08);
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.app-logo:hover {
+  transform: translateY(-6px) scale(1.06);
+}
+
+/* ---------- Title ---------- */
+.app-header h1 {
+  margin: 0;
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  color: var(--text-primary);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+/* ---------- Subtitle ---------- */
+.app-subtitle {
+  position: absolute;
+  bottom: 16px;
+  right: 36px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.2px;
+  z-index: 2;
+}
+
+/* Floating animation */
+@keyframes glassFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* ==========================================
+   NAVBAR  –  Glass Pill Navigation
+========================================== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  z-index: 2;
+}
+
+.nav-list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.7),
+    0 8px 24px rgba(17, 24, 39, 0.06);
+}
+
+.nav-item {
+  margin: 0;
+  background: transparent;
+}
+
+.nav-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.nav-item a:hover {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.nav-item a.active,
+.nav-item a:focus-visible {
+  background: rgba(0, 113, 227, 0.15);
+  color: var(--accent);
+  border-color: rgba(0, 113, 227, 0.25);
+}
+
+/* ==========================================
+   CONTENT AREA
+========================================== */
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 28px 32px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(30px) saturate(150%);
+  -webkit-backdrop-filter: blur(30px) saturate(150%);
+  box-shadow: var(--shadow-soft);
+}
+
+section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 32px;
+  min-height: 0;
+}
+
+/* ==========================================
+   FOOTER  –  Subtle Glass Bar
+========================================== */
+.footer {
+  margin: 0 32px 28px;
+  padding: 22px 40px;
+  text-align: center;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.7),
+    0 10px 30px rgba(17, 24, 39, 0.06);
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* ==========================================
+   USER BADGE  (glass chip)
+========================================== */
+.user-style {
+  position: absolute;
+  right: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px 10px 12px;
+  width: auto;
+  min-width: 180px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  backdrop-filter: blur(20px);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+  z-index: 5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-style:hover {
+  transform: translateY(-50%) translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 900px) {
+  .app-header {
+    margin: 20px 16px 0;
+    padding: 18px 24px;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .app-subtitle {
+    position: static;
+    margin-top: 4px;
+  }
+
+  .app-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .app-content,
+  .footer {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .user-style {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .nav-item a {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}

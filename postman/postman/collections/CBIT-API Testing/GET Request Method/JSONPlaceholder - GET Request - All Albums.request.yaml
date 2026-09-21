@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://jsonplaceholder.typicode.com/albums
+method: GET
+order: 4429284354345555

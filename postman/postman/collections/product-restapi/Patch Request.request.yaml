@@ -1,0 +1,12 @@
+$kind: http-request
+name: Patch Request
+url: http://localhost:8088/producthive/api/products/1008
+method: PATCH
+body:
+  type: json
+  content: |-
+    {
+            "madein": "rusia",
+            "price": 1.0
+        }
+order: 4436649542583338

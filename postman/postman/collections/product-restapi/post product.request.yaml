@@ -1,0 +1,14 @@
+$kind: http-request
+name: post product
+url: http://localhost:8088/producthive/api/products
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "name": "Ultrabook Laptop 14 inch",
+        "brand": "Lenovo",
+        "madein": "India",
+        "price": 62999
+    }
+order: 1785134966313

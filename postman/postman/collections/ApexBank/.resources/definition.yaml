@@ -1,0 +1,18 @@
+$kind: collection
+name: ApexBank
+variables:
+  - key: supabase_service_role_api_key_0snb
+    secret: true
+    disabled: false
+  - key: supabase_service_role_api_key_0l3v
+    secret: true
+    disabled: false
+  - key: json_web_token_0l3v
+    secret: true
+    disabled: false
+  - key: json_web_token_0fon
+    secret: true
+    disabled: false
+  - key: supabase_service_role_api_key_0fon
+    secret: true
+    disabled: false

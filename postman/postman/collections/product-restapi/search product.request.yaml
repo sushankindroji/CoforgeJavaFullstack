@@ -1,0 +1,7 @@
+$kind: http-request
+name: search product
+url: http://localhost:8088/producthive/api/search?name=laptop
+method: GET
+queryParams:
+  name: laptop
+order: 4499330911958871

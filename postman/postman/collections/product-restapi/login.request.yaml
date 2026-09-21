@@ -1,0 +1,12 @@
+$kind: http-request
+name: login
+url: http://localhost:8088/producthive/api/login
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "email": "ssi@gmail.com",
+        "password": "123"
+    }
+order: 4495590983878280

@@ -1,0 +1,29 @@
+<div class="container">
+
+    <h1>Customer Directory</h1>
+
+    <div class="customer-grid">
+        <div class="customer-card" *ngFor="let customer of customers">
+            <div class="image-section">
+                <img
+                    [src]="getImage(customer.image)"
+                    alt="Customer Image">
+            </div>
+            <div class="details">
+                <h2>
+                    {{customer.firstName}}
+                    {{customer.lastName}}
+                </h2>
+                <p>
+                    <strong>ID :</strong>
+                   {{customer.customerId}}
+                </p>
+
+                <button
+                    (click)="downloadPassport(customer.passport, customer.firstName)">
+                    Download Passport
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

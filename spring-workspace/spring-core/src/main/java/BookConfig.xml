@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Address 1 -->
+    <bean id="address1" class="com.coforge.training.springcore.model.Address">
+        <property name="addressLine1" value="#12 MG Road"/>
+        <property name="city" value="Bengaluru"/>
+        <property name="state" value="Karnataka"/>
+        <property name="country" value="India"/>
+    </bean>
+
+    <!-- Address 2 -->
+    <bean id="address2" class="com.coforge.training.springcore.model.Address">
+        <property name="addressLine1" value="Plot 45, Jubilee Hills"/>
+        <property name="city" value="Hyderabad"/>
+        <property name="state" value="Telangana"/>
+        <property name="country" value="India"/>
+    </bean>
+
+    <!-- Address 3 -->
+    <bean id="address3" class="com.coforge.training.springcore.model.Address">
+        <property name="addressLine1" value="221B Baker Street"/>
+        <property name="city" value="London"/>
+        <property name="state" value="Greater London"/>
+        <property name="country" value="UK"/>
+    </bean>
+
+    <!-- Book 1 -->
+    <bean id="book1" class="com.coforge.training.springcore.model.Book">
+        <constructor-arg value="111"/>
+        <constructor-arg value="Java Programming"/>
+        <constructor-arg value="James Gosling"/>
+        <constructor-arg value="BPB Publications"/>
+        <constructor-arg value="250"/>
+        <constructor-arg ref="address1"/>
+    </bean>
+
+    <!-- Book 2 -->
+    <bean id="book2" class="com.coforge.training.springcore.model.Book">
+        <constructor-arg value="222"/>
+        <constructor-arg value="Python Essentials"/>
+        <constructor-arg value="Bala Guruswamy"/>
+        <constructor-arg value="Prime Publications"/>
+        <constructor-arg value="300"/>
+        <constructor-arg ref="address2"/>
+    </bean>
+
+    <!-- Book 3 -->
+    <bean id="book3" class="com.coforge.training.springcore.model.Book">
+        <constructor-arg value="333"/>
+        <constructor-arg value="Mongo DB Made Simple"/>
+        <constructor-arg value="Dwight Merriman"/>
+        <constructor-arg value="Oxford Publications"/>
+        <constructor-arg value="200"/>
+        <constructor-arg ref="address3"/>
+    </bean>
+
+</beans>

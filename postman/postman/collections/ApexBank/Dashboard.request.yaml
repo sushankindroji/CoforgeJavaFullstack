@@ -1,0 +1,9 @@
+$kind: http-request
+name: Dashboard
+url: http://localhost:8080/api/dashboard
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{supabase_service_role_api_key_0snb}}"
+order: 4442972085716826

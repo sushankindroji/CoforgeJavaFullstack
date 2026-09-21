@@ -1,0 +1,44 @@
+retail_etl_full_project/
+├── config/
+│   ├── settings.py
+│   ├── table_config.py
+│   └── hash_config.py
+├── extract/
+│   └── extractor.py
+├── load/
+│   ├── staging_loader.py
+│   └── dw_loader.py
+├── utils/
+│   ├── database.py
+│   ├── batch.py
+│   ├── watermark.py
+│   ├── hash_utils.py
+│   ├── change_detection.py
+│   └── metadata.py
+├── sql/
+│   ├── 01_staging_and_control.sql
+│   ├── 02_dimensions.sql
+│   ├── 03_facts.sql
+│   ├── 04_reporting_views.sql
+│   ├── 05_warehouse_reconciliation.sql
+│   ├── 06_reporting_queries.sql
+│   └── 07_validation.sql
+├── scripts/
+│   ├── run_dw_pipeline.py
+│   ├── run_reconciliation.py
+│   └── run_sql_file.py
+├── tests/
+│   ├── conftest.py
+│   ├── test_connections.py
+│   ├── test_source_tables.py
+│   └── test_warehouse.py
+├── dashboard/
+│   └── app.py
+├── docs/
+│   ├── SETUP_AND_EXECUTION_GUIDE.md
+│   ├── PROJECT_DOCUMENTATION.md
+│   └── PROJECT_STATUS.md
+├── .env.example
+├── .gitignore
+├── requirements.txt
+└── README.md

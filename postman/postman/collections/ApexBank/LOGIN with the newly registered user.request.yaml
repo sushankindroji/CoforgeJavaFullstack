@@ -1,0 +1,12 @@
+$kind: http-request
+description: ""
+url: http://localhost:8080/api/auth/login
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "userId": "arjun.malhotra",
+      "password": "Password@123"
+    }
+order: 4225045015120532

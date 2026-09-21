@@ -1,0 +1,41 @@
+<header class="header">
+  <h1>My Dream App</h1>
+</header>
+
+<nav class="navbar">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<main class="main-content">
+  <h2>Welcome to My Dream App! Main Content Area</h2>
+
+  <p>
+    This is a simple Angular application to demonstrate the structure of an app
+    component.
+  </p>
+
+  <img src="/images/logo.png" alt="Angular Logo" class="logo">
+
+  <p>
+    My name is <strong>{{ name }}</strong><br>
+    I am <strong>{{ age }}</strong> years old.<br>
+    {{ isLoggedIn ? '✅ You are logged in!' : '❌ Please log in.' }}
+  </p>
+
+  <h3>My Hobbies</h3>
+
+  <ul>
+    <li *ngFor="let hobby of hobbies">
+      {{ hobby }}
+    </li>
+  </ul>
+
+  <app-typescriptdemo></app-typescriptdemo>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 My Dream App. All rights reserved.</p>
+</footer>

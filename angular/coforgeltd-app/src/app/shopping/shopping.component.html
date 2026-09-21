@@ -1,0 +1,21 @@
+<div style="background-color: burlywood;color:blue;padding:10px;border-radius:8px;">
+  <h2>Shopping List</h2>
+  <h3 style="color: red;">{{myData}}</h3>
+</div>
+
+<div class="products-container">
+  <div *ngFor="let product of products" class="product-card">
+    <div class="product-image">
+      <img [src]="product.image" [alt]="product.title">
+    </div>
+    
+    <div class="product-info">
+      <div class="product-id">ID: {{product.id}}</div>
+      <h3 class="product-title">{{product.title}}</h3>
+      <div class="product-category">{{product.category}}</div>
+      <p class="product-description">{{product.description}}</p>
+      <div class="product-price">${{product.price}}</div>
+    </div>
+  </div>
+</div>
+

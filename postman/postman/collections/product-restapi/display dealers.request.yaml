@@ -1,0 +1,5 @@
+$kind: http-request
+name: display dealers
+url: http://localhost:8088/producthive/api/dealers
+method: GET
+order: 4502344612687464

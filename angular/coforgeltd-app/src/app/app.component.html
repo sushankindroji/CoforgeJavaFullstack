@@ -1,0 +1,48 @@
+
+ <div class="mycontainer">
+
+  <header class="header">
+      <h1>Coforge Technologies</h1>
+  </header>
+  
+    
+    <nav class="mynav">
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/ajax">Data Binding</a></li>
+          <li><a routerLink="/pipes">Pipes</a></li>
+          <li><a routerLink="/dir">Directives</a></li>
+          <li><a routerLink="/dir19">Angular 19 Directives</a></li>
+          <li><a routerLink="/login">Login</a></li>
+
+          <li class="dropdown">
+              <span>Forms</span>
+              <ul class="dropdown-menu">
+                <li><a routerLink="/contact">Template Form</a></li>
+                <li><a routerLink="/register">Reactive Form</a></li>
+              </ul>
+          </li>
+
+          <li><a routerLink="/aboutus">About Us</a></li>
+          <li><a routerLink="/shop">Rest API</a></li>
+        </ul> 
+  </nav>
+  
+  <main class="main-content">
+     <!-- 
+    * The Routed components will be displayed here.
+    * It displays Child Components &  enables feature of SPA 
+    * So that we can navigate to different pages without reloading the entire page.
+    * It is a placeholder for the routed components to be displayed.
+    * Use <router-outlet></router-outlet> in the template to display the routed
+      components.
+     -->
+    <router-outlet></router-outlet>
+
+  </main>
+  
+  <footer class="myfooter">
+      <p>&copy; 2026 Coforge Technologies. All rights reserved.</p>
+  </footer>
+    
+ </div>   

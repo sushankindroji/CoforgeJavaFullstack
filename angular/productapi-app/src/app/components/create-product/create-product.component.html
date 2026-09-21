@@ -1,0 +1,96 @@
+<div class="product-form-container">
+  <!-- Decorative elements removed -->
+  
+  <div class="form-wrapper">
+    <div class="form-card">
+      <!-- Form Header -->
+      <div class="form-header">
+        <h1 class="form-title">{{ getTitle() }}</h1>
+      </div>
+      
+      <!-- Form Body -->
+      <div class="form-body">
+        <form class="product-form" (ngSubmit)="saveOrUpdateProduct()" ngNativeValidate>
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Product Name"
+              class="form-control"
+              [(ngModel)]="name"
+              name="name"
+              required
+            />
+            <div class="validation-feedback">
+              Product name is required
+            </div>
+          </div>
+
+          <!-- Brand Field -->
+          <div class="form-group">
+            <label for="brand">Brand</label>
+            <input
+              type="text"
+              id="brand"
+              placeholder="Product Brand"
+              class="form-control"
+              [(ngModel)]="brand"
+              name="brand"
+              required
+            />
+            <div class="validation-feedback">
+              Brand name is required
+            </div>
+          </div>
+
+          <!-- Made In Field -->
+          <div class="form-group">
+            <label for="madein">Made In</label>
+            <input
+              type="text"
+              id="madein"
+              placeholder="Country of origin"
+              class="form-control"
+              [(ngModel)]="madein"
+              name="madein"
+              required
+            />
+            <div class="validation-feedback">
+              Country of origin is required
+            </div>
+          </div>
+
+          <!-- Price Field -->
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input
+              type="text"
+              id="price"
+              placeholder="Price in ₹"
+              class="form-control"
+              [(ngModel)]="price"
+              name="price"
+              required
+              pattern="^\d+(\.\d{1,2})?$"
+            />
+            <div class="validation-feedback">
+              Please enter a valid price (e.g., 999.99)
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">
+              Save Product
+            </button>
+            <button type="button" class="cancel-btn" (click)="cancel()">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

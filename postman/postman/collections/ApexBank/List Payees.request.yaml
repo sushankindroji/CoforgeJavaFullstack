@@ -1,0 +1,9 @@
+$kind: http-request
+name: List Payees
+url: http://localhost:8080/api/payees
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0fon}}"
+order: 4499893295268180

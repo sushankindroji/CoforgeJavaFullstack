@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Session Tracking using HTTPSession</title>
+<link rel="stylesheet" href="styles/session.css">
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+if(params.get("msg") === "expired")
+{
+    document.getElementById("message").innerHTML =
+        "⚠ Session expired. Please login again.";
+}
+</script>
+</head>
+<body>
+	<div class="container">
+
+		<h2>ShopStop Login with Session Handling</h2>
+
+		<p id="message" class="message"></p>
+
+		<form action="sessionlogin" method="post">
+
+			<label>Username</label> <input type="text" name="username" required>
+
+			<label>Password</label> <input type="password" name="password"
+				required> <input type="submit" value="Login"> <input
+				type="reset" value="Clear">
+
+		</form>
+
+	</div>
+</body>
+</html>

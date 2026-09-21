@@ -1,0 +1,2 @@
+python3 -m scripts.run_data_quality - Execute  Data Quality Test cases
+pytest -v - execute pytest test cases.

@@ -1,0 +1,91 @@
+<div class="container">
+
+    <h1>Angular Data Binding Demo</h1>
+
+    <!-- Interpolation -->
+    <div class="card">
+        <h2>1. Interpolation</h2>
+
+        <p><strong>Company :</strong> {{companyName | uppercase}}</p>
+        <p><strong>Trainer :</strong> {{trainer}}</p>
+        <p><strong>Course :</strong> {{course}}</p>
+    </div>
+
+
+    <!-- Property Binding -->
+    <div class="card">
+
+        <h2>2. Property Binding</h2>
+
+        <img [src]="imagePath" alt="Angular Logo">
+        
+      
+      
+      <br><br>
+      
+      <button [disabled]="isDisabled">Property Binding Button</button>
+      
+      </div>
+
+
+    <!-- Event Binding -->
+    <div class="card">
+
+        <h2>3. Event Binding</h2>
+        
+        <button (click)="increment()">Click Me</button>
+      
+        <h3>Total clicks: {{ count }}</h3>
+      
+      <button (click)="showMessage()">Show Message</button>
+
+      <button (click)="clearMessage()">Clear Message</button>
+      
+      <p>{{message}}</p>
+      
+
+        <!--Event Binding to functions with return type-->
+       <p>Today's Date : {{ displayDate() }}</p>
+       <p>The Addition of 100 & 200 is : {{ add() }}</p>
+       <p>The Addition of 300 & 500 in expression {{ 300 + 500 }} </p>
+       <p>The Area of Circle with radius 5 is {{ area(5) | number: '2.2-2' }} </p>
+         
+         
+       </div>
+        <!-- Two Way Data Binding using [(ngModel)] Directive -->
+    <div class="card">
+
+        <h2>4. Two-Way Data Binding</h2>
+
+       <input type="text" [(ngModel)]="trainer" placeholder="Enter Trainer Name">
+
+        <h3>Hello {{trainer}}</h3>
+
+    </div>
+
+
+     <!-- Style Binding -->
+    <div class="card">
+<h2>Style Binding Example</h2>
+
+<p
+    [style.color]="textColor"
+    [style.background-color]="bgColor"
+    [style.font-size.px]="fontSize"
+    [style.font-weight]="isBold ? 'bold' : 'normal'"
+    style="padding:15px;border-radius:8px;">
+    {{message1}}
+</p>
+
+<hr>
+
+<button (click)="textColor='red'">Red</button>
+<button (click)="textColor='green'">Green</button>
+<button (click)="bgColor='lightblue'">Blue Background</button>
+<button (click)="fontSize=32">Increase Font</button>
+<button (click)="fontSize=18">Decrease Font</button>
+<button (click)="isBold=!isBold">Toggle Bold</button>
+
+ </div>
+</div>
+      

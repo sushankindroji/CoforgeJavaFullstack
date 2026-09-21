@@ -1,0 +1,56 @@
+.about-us {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.98), rgba(236, 242, 255, 0.9));
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.about-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-heading h2 {
+  margin: 0;
+  font-size: 2.3rem;
+  color: #1e293b;
+}
+
+.about-heading p {
+  margin: 0.75rem auto 0;
+  max-width: 680px;
+  color: #475569;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.about-grid article {
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-grid article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.11);
+}
+
+.about-grid h3 {
+  margin-top: 0;
+  color: #4338ca;
+}
+
+.about-grid p {
+  color: #475569;
+  line-height: 1.75;
+}

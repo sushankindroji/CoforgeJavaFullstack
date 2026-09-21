@@ -1,0 +1,93 @@
+<div class="container-dir">
+
+  <h2>Angular Directives Demo</h2>
+
+  <!-- ngIf -->
+  <h3>*ngIf → Conditional Display</h3>
+  <p class="definition">
+    *ngIf shows or hides elements based on a condition.
+  </p>
+
+  <button (click)="toggleContent()">Toggle Student List</button>
+
+  <div *ngIf="showContent" class="card">
+
+    Student list is visible using *ngIf
+
+    <!-- ngFor -->
+    <h3>*ngFor → Looping Data</h3>
+    <p class="definition">
+      *ngFor is used to iterate over an array and display items.
+    </p>
+
+    <ul>
+      <li *ngFor="let student of students">
+        {{ student.name }} - {{ student.marks }}
+      </li>
+    </ul>
+
+  </div>
+
+  <h3>Skills</h3>
+  <ul>
+    <li *ngFor="let i of skills">
+      {{ i }}
+    </li>
+  </ul>
+
+
+   <!-- ===================== -->
+  <!-- ngClass -->
+  <!-- ===================== -->
+  <h3>[ngClass] → Dynamic Classes</h3>
+  <p class="definition">
+    ngClass dynamically applies CSS classes based on conditions.
+  </p>
+
+  <div *ngFor="let student of students"
+       class="box"
+       [ngClass]="student.marks >= 50 ? 'pass' : 'fail'">
+    {{student.name}} - {{student.marks}}
+  </div>
+
+
+  <!-- ===================== -->
+  <!-- ngStyle -->
+  <!-- ===================== -->
+  <h3>[ngStyle] → Dynamic Styles</h3>
+  <p class="definition">
+    ngStyle applies inline styles dynamically.
+  </p>
+
+  <div *ngFor="let student of students"
+       class="box"
+       [ngStyle]="{
+         'color': student.marks >= 50 ? 'green' : 'red',
+         'font-weight': student.marks > 80 ? 'bold' : 'normal'
+       }">
+    {{student.name}} - {{student.marks}}
+  </div>
+
+
+  <!-- ===================== -->
+  <!-- ngSwitch -->
+  <!-- ===================== -->
+  <h3>ngSwitch → Multiple Conditions</h3>
+  <p class="definition">
+    ngSwitch works like a switch-case statement to display one matching block.
+  </p>
+
+  <div class="buttons">
+    <button (click)="changeGrade('A')">A</button>
+    <button (click)="changeGrade('B')">B</button>
+    <button (click)="changeGrade('C')">C</button>
+    <button (click)="changeGrade('D')">D</button>
+  </div>
+
+  <div [ngSwitch]="selectedGrade" class="switch-box">
+    <p *ngSwitchCase="'A'" class="grade a">Excellent 🎉</p>
+    <p *ngSwitchCase="'B'" class="grade b">Good 👍</p>
+    <p *ngSwitchCase="'C'" class="grade c">Average 🙂</p>
+    <p *ngSwitchDefault class="grade d">Needs Improvement ⚠️</p>
+  </div>
+</div>
